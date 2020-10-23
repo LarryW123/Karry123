@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>消除浮动定位影响</title>
+	<!-- 在使用了float浮动属性之后，要想后面的元素在下一行正常排列，必须要清除浮动属性。-->
+    <!-- 但是这种做法并不能完全消除浏览器兼容问题(尤其是chrom浏览器)而导致错位。-->
+    <!-- 碰到这种情况，请检查以下3点：-->
+    <!-- 1、给予该DIV层或者直属上层定义一些非常明确的属性，比如宽、高、边框大小、颜色等等。-->
+    <!-- 2、给予每一个行内的DIV层都重新定义一个上级DIV，并对其定义明确的属性。-->
+    <!-- 3、检查“页面总宽度-原本排列层的总宽度≤单个层宽度”情况是否存在 -->
+    <style type="text/css">
+      #divr{width:200px;height:200px;background-color:red;}
+      #divb{width:200px;height:200px;background-color:blue;}
+      #divg{width:200px;height:200px;background-color:green;}
+      div[id*=div]{float:left;}
+    </style>
+  </head>
+  <body>
+    <div id="divr"></div>
+    <div id="divg" style="clear:left;"></div>
+    <div id="divb"></div>
+  </body>
+</html>

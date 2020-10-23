@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>容器属性：flex-direction</title>
+    <!-- 
+    flex-direction决定项目的排列方向，可能取值：
+	  1、row（默认值）：主轴为水平方向，起点在左端
+	  2、row-reverse：主轴为水平方向，起点在右端
+	  3、column：主轴为垂直方向，起点在上沿
+	  4、column-reverse：主轴为垂直方向，起点在下沿
+    -->
+    <style type="text/css">
+      #d1{width:100px;height:100px;line-height:100px;text-align:center;background-color:#333;color:#fff;}
+      #d2{width:100px;height:100px;line-height:100px;text-align:center;background-color:#666;color:#fff;}
+      #d3{width:100px;height:100px;line-height:100px;text-align:center;background-color:#999;color:#fff;}
+      #d4{width:100px;height:100px;line-height:100px;text-align:center;background-color:#ccc;color:#fff;}
+      .box1{display:flex;flex-direction:row;}
+      .box2{display:flex;flex-direction:row-reverse;}
+      .box3{display:flex;flex-direction:column;}
+      .box4{display:flex;flex-direction:column-reverse;}
+    </style>
+  </head>
+  <body>
+    <!-- 修改class值，观察排列情况 -->
+    <div class="box1">
+      <div id="d1">div1</div>
+      <div id="d2">div2</div>
+      <div id="d3">div3</div>
+      <div id="d4">div4</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>变量的声明</title>
+    <Script type="text/JavaScript">
+      //let:块级作用域，函数内部使用let定义后，对函数外部无影响(了解)
+      //IE不支持,使用极少
+      let c=2;
+      alert("外部c="+c);
+      function change(){
+        let c=5;
+        alert("内部c="+c);
+      }
+      change();
+      alert("c="+c);
+    </Script> 
+  </head>
+  
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>验证手机号码</title>
+      <script type="text/javascript">
+        function tel(name) {
+          var reg = /^[0-9]{11}$/;
+          var isRight = reg.test(name);
+          if (!isRight){ 
+            alert("手机号为11位数字"); 
+          }
+        }
+      </script>
+  </head>
+  <body>
+    <label>联系手机:</label>
+    <input type="text" onblur="tel(this.value);"/>
+  </body>	
+</html>
+

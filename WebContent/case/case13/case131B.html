@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>网页中插入外链媒体</title>
+  </head>
+  <body style="color:#fff; background-color: #000;" scroll="no">
+    <label>3、使用object插入多媒体(外链音乐：Despacito)</label><br/>
+    <!-- object用于在页面中插入多媒体元素： -->
+    <!-- 作用与embed几乎完全一致，不同之处： -->
+    <!-- <object>仅支持IE，其data属性等同于src-->
+    <!-- <embed>标签支持旧版本的IE和其他的浏览器（如FF、chrome等） -->
+    <!-- 所以在写页面的时候，最好是将embed的内容嵌入到object标签内 -->
+    <!-- 这样就可以防止有的浏览器出现不兼容的情况了 -->
+    <object id="obj" width="100%" height="600px">
+      <param value="http://v.yinyuetai.com/video/2849747" />
+      <embed width="100%" height="600px" src="http://v.yinyuetai.com/video/2849747" />
+    </object>
+  </body>
+</html>

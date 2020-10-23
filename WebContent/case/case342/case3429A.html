@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Object对象</title>
+    <script type="text/javascript">
+      //以new调用构造器创建Object对象p
+  	  function Person(name){//1、建立一个Person函数
+  	  	this.name = name;
+  	  }
+  	  
+      var p = new Person();//2、实例化，创建Person类的实例
+      
+      p.name = "tom";//3、为已存在的属性赋值
+      alert(p.name);
+      
+      p.age = 16;//3、为不存在的属性赋值，会自动为该对象增加属性
+      alert(p.age);
+      
+      Person.prototype.sayHi = function(){//4、为Person类创建方法
+      	alert("Hello Jerry");
+      };
+      p.sayHi();
+      //其实，我们也可以像在java中那样，在Person()函数中这样写：
+      //this.sayHi = function(){alert("Hello Jerry");};
+      //但是这样就形成了闭包，会扩大局部变量的作用域，所以此方法一般不推荐使用
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+

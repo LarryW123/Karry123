@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>根据Name访问节点</title>
+    <script type="text/javascript">
+      function judge(){
+        var arr = document.getElementsByName("r1");
+        for(var i=0;i<arr.length;i++){ 
+          if (arr[i].checked){
+          	alert("你选择的是第"+(i+1)+"个选项");
+          	alert("值为"+arr[i].value);
+  		  } 
+      	} 
+      }
+      //ID和Name的区别：id即身份证号，是唯一的；name即姓名，可以同名。主要用途：
+      //1、在与服务器交互数据时，服务器端是根据其name值，通过Request.Params取得元素提交的值
+      //2、表单中的radio控件的分组是通过name来实现的
+      //3、建立页面中的锚点时，使用name
+      //4、定义图片的热点区域，使用 usemap="#name"
+    </script>
+  </head>
+  <body>
+  <span id="span1" style="color:green">√</span>
+    <input type="radio" name="r1" value="A">A
+    <input type="radio" name="r1" value="B">B
+    <input type="radio" name="r1" value="C">C
+    <input type="radio" name="r1" value="D">D
+    <input type="button" value="判断" onclick="judge();">
+  </body>
+</html>
+

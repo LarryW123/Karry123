@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Jcrop图片剪裁</title>
+    <link href="Jcrop/css/basic.css" rel="stylesheet" type="text/css" />
+    <link href="Jcrop/css/jquery.Jcrop.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div class="wrap" id="jcropdiv">
+      <!-- 左侧：原图的缩略图 -->
+      <div class="wl">
+        <div class="jc-demo-box">
+          <div id="target" class="jcrop_w" ><img src='Jcrop/img/demo.jpg'/></div>
+        </div>
+        <div class="jy-up-ch">
+          <a id="idLeft" href="" class="bch bch1"></a>
+          <a id="idSmall" href="" class="bch bch2"></a>
+          <a id="idBig" href="" class="bch bch3"></a>
+          <a id="idRight" href="" class="bch bch4"></a>
+        </div>
+      </div>
+      <!-- 右侧：剪裁后的预览效果图 -->
+      <div class="wr" id="preview-pane">
+        <div class="preview-container">
+          <div class="pre-1"><img src='Jcrop/img/demo.jpg'/></div>
+          <div class="pre-2"><img src='Jcrop/img/demo.jpg'/></div>
+          <div class="pre-3"><img src='Jcrop/img/demo.jpg'/></div>
+        </div>
+      </div>
+    </div>
+    
+    <input type="button" id="btnChangeImg" value="更换图片"/>
+    <form id="form" action="case431B2.html" method="post" enctype="multipart/form-data" >
+      <input type="file" id="fileChangeImg" style="display:none"/>
+    </form>
+    
+    <script type="text/javascript" src="Jcrop/js/jQuery.js"></script>
+    <script type="text/javascript" src="Jcrop/js/jquery.Jcrop.js"></script>
+    <script type="text/javascript" src="Jcrop/js/basic.js"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#btnChangeImg").click(function(){
+        	$("#fileChangeImg").click();
+        });
+      });
+      
+      $(document).ready(function(){
+        $("#fileChangeImg").change(function(){
+          var imgURL = "Jcrop/img/demo2.png";
+          $("#target")[0].innerHTML="<img src='"+imgURL+"'/>";
+          $(".pre-1")[0].innerHTML="<img src='"+imgURL+"'/>";
+          $(".pre-2")[0].innerHTML="<img src='"+imgURL+"'/>";
+          $(".pre-3")[0].innerHTML="<img src='"+imgURL+"'/>";
+      	$("#form").submit();
+        });
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>容器属性：justify-content</title>
+    <!-- 
+    justify-content决定项目在主轴上的对齐方式，可能取值：
+      1、flex-start(默认值)：左对齐
+      2、flex-end：右对齐
+      3、center：居中对齐
+      4、space-between：两端对齐
+      5、space-around：平分间隔，即每个项目两侧的间隔相等
+    -->
+    <style type="text/css">
+      .box{
+        width:400px;height:400px;line-height:400px;text-align:center;
+        background-color:#333;color:#fff;border:1px solid red;
+      }
+      .box1{display:flex;flex-flow:row wrap;justify-content:flex-start;}
+      .box2{display:flex;flex-flow:row wrap;justify-content:flex-end;}
+      .box3{display:flex;flex-flow:row wrap;justify-content:center;}
+      .box4{display:flex;flex-flow:row wrap;justify-content:space-between;}
+      .box5{display:flex;flex-flow:row wrap;justify-content:space-around;}
+    </style>
+  </head>
+  <body>
+    <!-- 修改class值，观察排列情况 -->
+    <div class="box4">
+      <div class="box">div1</div>
+      <div class="box">div2</div>
+      <div class="box">div3</div>
+      <div class="box">div4</div>
+    </div>
+  </body>
+</html>

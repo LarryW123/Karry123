@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>图片相对位置</title>
+    <style type="text/css">
+      .d1{width:200px; height:200px;
+        border:1px solid red;
+        background:url("images/img.jpg");
+        background-size:100px 100px;
+        background-repeat:no-repeat;
+        background-position:center center;
+      }
+      .d2{width:200px; height:200px;
+        border:1px solid red;
+        background:url("images/img.jpg") no-repeat center top;
+        background-size:100px 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 素材中的图片为500*500大小 -->
+    <div class="d1"></div>
+    <div class="d2"></div>
+  </body>
+</html>

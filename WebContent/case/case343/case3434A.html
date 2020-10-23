@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>支持RegExp的String对象的方法</title>
+    <script type="text/javascript">
+    	var str="I am a student!";
+    	var reg=new RegExp("t");//var reg=/student/;
+		document.write(str.search(reg)+"<br/>");//返回第一个匹配到的字符串位置(从0开始计数)
+		
+		reg=new RegExp("T");//search()大小写敏感，加上i可以进行忽略大小写匹配
+		document.write(str.search(reg)+"<br/>");
+		reg=new RegExp("T","i");//search()大小写敏感，加上i可以进行忽略大小写匹配
+		document.write(str.search(reg)+"<br/>");
+		
+		reg=new RegExp("t");//没有g标记，只进行一次匹配
+		document.write(str.match(reg)+"<br/>");
+		reg=new RegExp("t","g");//增加g标记，只进行多次匹配
+		document.write(str.match(reg)+"<br/>");
+		
+		reg=new RegExp("t");//没有g标记，只进行一次匹配
+		document.write(str.replace(reg,"a")+"<br/>");
+		reg=new RegExp("T","g");//增加g标记，只进行多次匹配，但同样大小写敏感
+		document.write(str.replace(reg,"a")+"<br/>");
+		reg=new RegExp("T","gi");
+		document.write(str.replace(reg,"a")+"<br/>");
+    </script>
+  </head>
+  <body>
+  
+  </body>	
+</html>
+

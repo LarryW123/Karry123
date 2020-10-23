@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>超链接示例</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <h3>1、链接载体</h3>
+    <!-- 文字链接  -->
+    <a href="http://www.jju.edu.cn" target="_blank">文字链接</a>
+    <br/><br/>
+    <!-- 图片链接  -->
+    <a href="http://www.jju.edu.cn" target="_blank">
+      <img src="images/img.jpg" width="200px" height="160px" alt="找不到图片"/>
+    </a>
+    
+    <h3>2、链接目标</h3>
+    <!-- 文件链接  -->
+    <a href="case111.html" target="_self">链接到其他网页文件</a>
+    <br/><br/>
+    <a href="file/case.txt" target="_self">链接到其他文本文件</a>
+    <br/><br/>
+    <a href="file/case.zip">链接到其他不可被浏览器解析的文件</a>
+    <br/><br/>
+    <!-- 邮件链接  -->
+    <a href="mailto:zhangsan@163.com">链接到电子邮箱</a>
+    <br/><br/>
+    
+    <img src="images/case.gif"/>
+    <h3>3、空链接</h3>
+    <a href="#" onclick="javascript:;">空链接(#)</a>
+    <br/><br/>
+    
+    <h3>4、死链接</h3>
+    <a href="###">死链接(###)</a>
+    <br/><br/>
+    <!-- javascript:是一个伪协议，类似的伪协议还有 mail:、tel:、file:等 -->
+    <a href="javascript:;">死链接(javascript)</a>
+    <br/><br/>
+    <a href="javascript:void(0);">死链接void(0)</a>
+    <br/><br/>
+    <a href="javascript:void(null);">死链接void(null)</a>
+    <br/><br/>
+    <a href="javascript:return false;">死链接return false</a>
+    <br/><br/>
+    
+    <h3>5、伪链接</h3>
+    <span style="cursor:pointer;color:blue" onclick="fn()">假装我是超链接</span> 
+  </body>
+</html>

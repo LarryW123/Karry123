@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery遍历</title>
+    <style type="text/css">
+      div[id^=div1]{margin:5px;border:1px solid green;}
+      div[id^=div2]{margin:5px;border:1px solid blue;}
+    </style>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      //遍历div111的父亲
+      $(document).ready(function(){
+        $("#parent").click(function(){
+          var obj = $("#div111").parent();
+          obj.css({"color":"red","border":"1px solid red"});
+        });
+      })
+      //遍历div111的祖先
+      $(document).ready(function(){
+        $("#parents").click(function(){
+          var obj = $("#div111").parents();
+          obj.css({"color":"red","border":"1px solid red"});
+        });
+      })
+      //遍历div1的儿子
+      $(document).ready(function(){
+        $("#children").click(function(){
+          var obj = $("#div1").children();
+          obj.css({"color":"red","border":"1px solid red"});
+        });
+      })
+      //遍历div1的后代
+      $(document).ready(function(){
+        $("#find").click(function(){
+          var obj = $("#div1").find();
+          obj.css({"color":"red","border":"1px solid red"});
+        });
+      })
+      //遍历div113的所有兄弟
+      $(document).ready(function(){
+        $("#siblings").click(function(){
+          var obj = $("#div113").siblings();
+          obj.css({"color":"red","border":"1px solid red"});
+        });
+      })
+      //遍历div113的后一个弟弟
+      $(document).ready(function(){
+        $("#next").click(function(){
+          var obj = $("#div113").next();
+          obj.css({"color":"red","border":"1px solid red"});
+        });
+      })
+      //遍历div113的所有弟弟
+      $(document).ready(function(){
+        $("#nextAll").click(function(){
+          var obj = $("#div113").nextAll();
+          obj.css({"color":"red","border":"1px solid red"});
+        });
+      })
+      //遍历div113的前一个哥哥
+      $(document).ready(function(){
+        $("#prev").click(function(){
+          var obj = $("#div113").prev();
+          obj.css({"color":"red","border":"1px solid red"});
+        });
+      })
+      //遍历div113的所有哥哥
+      $(document).ready(function(){
+        $("#prevAll").click(function(){
+          var obj = $("#div113").prevAll();
+          obj.css({"color":"red","border":"1px solid red"});
+        });
+      })
+    </script>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div11">
+        <div id="div111">div111</div>
+        <div id="div112">div112</div>
+        <div id="div113">div113</div>
+        <div id="div114">div114</div>
+        <div id="div115">div115</div>
+      </div>
+      <div id="div12">
+        <div id="div121">div121</div>
+        <div id="div122">div122</div>
+        <div id="div123">div123</div>
+      </div>
+    </div>
+    <div id="div2">
+      <div id="div21">
+        <div id="div211">div211</div>
+        <div id="div212">div212</div>
+        <div id="div213">div213</div>
+      </div>
+      <div id="div22">
+        <div id="div221">div221</div>
+        <div id="div222">div222</div>
+        <div id="div223">div223</div>
+      </div>
+    </div>
+    
+    <input type="button" id="parent" value="div111的父亲"/>
+    <input type="button" id="parents" value="div111的祖先"/><br/>
+    
+    <input type="button" id="children" value="div1的儿子"/>
+    <input type="button" id="find" value="div1的后代"/><br/>
+    
+    <input type="button" id="siblings" value="div113的所有兄弟"/><br/>
+    
+    <input type="button" id="next" value="div113的后一个弟弟"/>
+    <input type="button" id="nextAll" value="div113的所有弟弟"/><br/>
+    
+    <input type="button" id="prev" value="div113的前一个哥哥"/>
+    <input type="button" id="prevAll" value="div113的所有哥哥"/><br/>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>document事件</title>
+    <script type="text/javascript">
+      window.onload =welcome();
+      function welcome(){
+        alert("欢迎访问本页！");
+      }
+
+      function exit(){
+        var s=confirm("确定要关闭吗本页吗？");
+        if(s==true){
+          window.opener=null;//1、创建一个空的父元素窗口
+          window.open('','_self');//2、将该窗口指向自身
+          //以上两步的含义可以理解为：在当前页面打开了当前页面
+          window.close();//3、此时的close()就可以关闭用open()打开的页面了
+        }
+      }
+    </script>
+  </head>
+  <body onbeforeunload ="exit();">
+    <p>按F5刷新页面</p>
+    <p>本代码存在浏览器兼容问题，请在IE浏览器下测试</p>
+    <p>说明:</p>
+    <p>1、页面加载时只执行onload</p>
+    <p>2、页面关闭时，先执行onbeforeunload，再执行onunload</p>
+    <p>3、页面刷新时，先执行onbeforeunload，再执行onunload，最后执行onload</p>
+    <p>此代码仅适合刷新，请自行百度“关闭和刷新”的判断</p>
+  </body>
+</html>
+

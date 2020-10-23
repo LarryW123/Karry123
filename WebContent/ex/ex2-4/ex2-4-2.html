@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Math对象</title>
+    <script type="text/javascript">
+ 		var rnd = parseInt(Math.random()*100);
+ 		alert(rnd);
+    	function s(){
+    		var t=parseInt(document.getElementById("txt").value);
+    		if(t>rnd){alert("大了");}
+    		else if(t<rnd){alert("小了");}
+    		else{alert("猜对了");}
+    	}
+    </script>
+  </head>
+  <body>
+    <input type="text" id="txt"/>
+    <input type="button" value="判断" onclick="s();"/>
+  </body>
+</html>

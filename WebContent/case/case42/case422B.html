@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <title>BootStrap的表格渲染</title>
+  <!--BootStrap设计的页面支持响应式的-->
+  <!--以下设置确保适当的绘制和触屏缩放-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--Bootstrap核心CSS文件-->
+  <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+  <!--引入JQuery的JS文件：一定要在BootStrap的JS文件的前面引入-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!--Bootstrap核心JavaScript文件-->
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- table渲染---条纹状表格：table-striped；带边框表格：table-bordered；鼠标悬停：table-hover；紧缩表格：table-condensed -->
+  <!-- th情景模式渲染---class="active|success|warning|danger|info" -->
+  <table class="table">
+    <caption>表格示例</caption>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>name</th>
+        <th>sex</th>
+        <th>birthday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>01</td>
+        <td>张三</td>
+        <td>男</td>
+        <td>1998-12-03</td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>李四</td>
+        <td>女</td>
+        <td>1999-01-21</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>王二</td>
+        <td>女</td>
+        <td>1999-07-13</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>赵大</td>
+        <td>男</td>
+        <td>2000-04-22</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

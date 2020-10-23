@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>验证账号密码</title>
+    <script type="text/javascript">
+      function checkUserName(userName) {
+        var reg = /^\w+$/;
+        var isRight = reg.test(userName);
+        if (!isRight){alert("账号只能是字母、数字、下划线！");}
+      }
+      function checkPW(pw) {
+        var reg = /^[0-9a-zA-Z]+$/;
+        var isRight = reg.test(pw);
+        if (!isRight){alert("密码只能是字母、数字！");}
+      }
+    </script>
+</head>
+<body>
+  <label>账号:</label>
+  <input type="text" onblur="checkUserName(this.value);" /><br/><br/>
+  <label>密码:</label>
+  <input type="text" onblur="checkPW(this.value);" />
+</body>	
+</html>
+

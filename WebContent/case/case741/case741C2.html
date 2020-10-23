@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>AJAX+JSON</title>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#btn").click(function(){
+      $.post("/Demo/servlet/case741",
+        function(data){
+          var jsonStr = '{"学校":"九江学院","地址":"江西省九江市前进东路551号","班级":[{"班级名称":"信A1011","专业名称":"计算机科学与技术","所在学院":"信息科学与技术学院","入学年份":2010,"班级人数":36},{"班级名称":"信A1121","专业名称":"软件工程","所在学院":"信息科学与技术学院","入学年份":2011,"班级人数":39},{"班级名称":"会A1012","专业名称":"审计学","所在学院":"会计学院","入学年份":2010,"班级人数":42},{"班级名称":"旅A1211","专业名称":"酒店管理","所在学院":"旅游与国土资源学院","入学年份":2012,"班级人数":31}]}';
+          var jsonObj = JSON.parse(jsonStr);
+          var str = "";
+          str += "学校:" + jsonObj.学校 + "<br/>";
+          str += "地址:" + jsonObj.地址 + "<br/>";
+          str += "班级:" + "<br/>";
+          //遍历JSON对象
+          str += "<table border='1px'>";
+          for(var i=0;i<jsonObj.班级.length;i++){
+            str += "<tr>";
+            if(i==0){
+              for(j in jsonObj.班级[i]){
+                str += "<td>";
+                str += j + "</td>";
+              }
+              str += "</tr>";
+            }
+            for(j in jsonObj.班级[i]){
+              str += "<td>";
+              str += jsonObj.班级[i][j] + "</td>";
+            }
+            str += "</tr>";
+          }
+          str += "</table>";
+          $("#sp")[0].innerHTML = str;
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+<form>
+  <button id="btn" type="button">发送AJAX请求</button><br/><br/>
+  <span id="sp" style="color:red"></span><br/><br/>
+</form>
+</body>
+</html>

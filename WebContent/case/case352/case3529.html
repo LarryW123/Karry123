@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>数据表格填充</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+      var str="A;B;A;C;D;B;C;A;D;C;C;C;A;B;A;D;A;B;C;D";
+      var arr=str.split(";");
+      document.write(arr);
+      
+      document.write("<table border='1px' width='400px'>");
+      for(var i=0;i<8;i++){
+        document.write("<tr>");
+        for(var j=1;j<=5;j++){
+          if(i%2==0){
+            document.write("<td style='background:#000;color:#fff'>"+(i*5/2+j)+"</td>");
+          }else{
+            document.write("<td>"+arr[parseInt(i*5/2)+j-3]+"</td>");
+          }
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    </script>
+  </head>
+  
+  <body>
+  </body>
+</html>

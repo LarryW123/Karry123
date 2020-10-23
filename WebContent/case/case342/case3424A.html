@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>数字验证码</title>
+    <script type="text/javascript">
+      function checkcode(){
+        var result = "";
+        for (var i=0;i<4;i++){
+          result += parseInt(Math.random()*10).toString();
+        }
+        alert("验证码："+result);
+      }
+    </script>
+  </head>
+  <body onload="checkcode()">
+
+  </body>
+</html>

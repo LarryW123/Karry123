@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>绝对定位</title>
+    <style type="text/css">
+      .div1{width:200px;height:200px;background:red;margin:0 auto;}
+      .div2{width:100px;height:100px;background:blue;}
+    </style>
+  </head>
+  <body>
+    <!-- 若父元素未特殊定位，则子元素绝对定位时，参照物为body -->
+    <div class="div1">
+      <div class="div2" style="position:absolute;left:10px;top:20px;"></div>
+    </div>
+    <br/>
+    <!-- 若父元素已特殊定位，则子元素绝对定位时，参照物为父元素 -->
+    <div class="div1" style="position:relative;">
+      <div class="div2" style="position:absolute;left:10px;top:20px;"></div>
+    </div>
+  </body>
+</html>

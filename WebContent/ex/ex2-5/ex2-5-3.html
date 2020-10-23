@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>遍历DOM对象</title>
+  </head> 
+<body> 
+   <script> 
+    function fn(){ 
+      var r = document.getElementsByName("radioGroup"); 
+      for(var i=0;i<r.length;i++){ 
+        if (r[i].checked){
+          alert("你选择的是第"+(i+1)+"个单选框,值为"+r[i].value);
+        } 
+      } 
+      return false; 
+    }
+</script> 
+   <body> 
+  <form name="form1" onsubmit="fn();">   
+    <input type="radio" name="radioGroup" value="A"/>A
+    <input type="radio" name="radioGroup" value="B"/>B   
+    <input type="radio" name="radioGroup" value="C"/>C  
+    <input type="radio" name="radioGroup" value="D"/>D
+    <input type="submit"/>  
+  </form>   
+</body>
+</html>

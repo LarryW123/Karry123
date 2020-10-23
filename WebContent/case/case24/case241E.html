@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>容器属性：align-items</title>
+    <!-- 
+    align-items决定项目在交叉轴上的对齐方式，可能取值：
+      1、flex-start(默认值)：左对齐
+      2、flex-end：右对齐
+      3、center：居中对齐
+      4、baseline：项目的第一行文字的基线对齐
+      5、stretch(默认值)：如果项目未设置高度或设为auto，将占满整个容器的高度
+        (尝试删除#d1~#d4，并给.box增加height属性试试)
+    -->
+    <style type="text/css">
+      #d1{height:400px;line-height:400px;}
+      #d2{height:200px;}
+      #d3{height:100px;}
+      #d4{height:300px;}
+      .box{
+        width:200px;text-align:center;
+        background-color:#333;color:#fff;border:1px solid red;
+      }
+      .box1{display:flex;flex-flow:row wrap;align-items:flex-start;}
+      .box2{display:flex;flex-flow:row wrap;align-items:flex-end;}
+      .box3{display:flex;flex-flow:row wrap;align-items:center;}
+      .box4{display:flex;flex-flow:row wrap;align-items:baseline;}
+      .box5{display:flex;flex-flow:row wrap;align-items:stretch;}
+    </style>
+  </head>
+  <body>
+    <!-- 修改class值，观察排列情况 -->
+    <div class="box4">
+      <div id="d1" class="box">div1</div>
+      <div id="d2" class="box">div2</div>
+      <div id="d3" class="box">div3</div>
+      <div id="d4" class="box">div4</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>验证码</title>
+  </head>
+
+  <body onload=createCode()>
+    <label id="lbl"></label>
+    <input type="text" id="code" name="code">
+    <br/><br/>
+    <input type="button" value="确定" onclick="checkCode();">
+  </body>
+
+  <script type="text/javascript">
+    var rs = "";
+    function createCode(){
+      var exp = "";
+      for (var i=0;i<3;i++){
+        switch(i){
+        case 0:
+          exp += parseInt(Math.random()*10)+"+";
+          break;
+        case 1:
+          exp += parseInt(Math.random()*10)+"*";
+          break;
+        case 2:
+          exp += parseInt(Math.random()*10);
+          break;
+        }
+      }
+      rs=eval(exp).toString();
+      document.getElementById("lbl").innerHTML = "请输入计算结果："+exp+"=";
+    }
+    
+    function checkCode(){
+    	var obj = document.getElementById("code");
+    	var val = obj.value;
+    	if(val==rs){
+    	  alert("正确");
+    	}else{
+    	  alert("错误");
+    	  obj.value = "";
+    	  createCode();
+    	}
+    }
+  </script>
+</html>

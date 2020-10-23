@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>表单输入验证示例</title>
+    <script type="text/javascript">
+      function checkData(){
+        var userName=document.forms[0].userName.value;
+        var password=document.forms[0].password.value;
+        var rePassword=document.forms[0].rePassword.value;
+        if(userName.length<=0)
+        	alert("用户名不能为空！");
+        else if(password<=0)
+        	alert("密码不能为空！");
+        else if(rePassword.length<=0)
+        	alert("重新输入密码不能为空！");
+        else if(userName.length<6)
+        	alert("用户名不能小于 6 位！");
+        else if(password!=rePassword)
+        	alert("两次输入密码不一致！");
+        else
+          {
+          alert("验证通过，表单可以提交！");
+          document.forms[0].submit();
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="" method="post">
+      <br>用户名：<input type="text" name="userName"></input>
+      <br>密码：<input type="password" name="password"></input>
+      <br>确认密码:<input type="password" name="rePassword"></input>
+      <br><input type="button" value="提交" onClick="checkData()"/>
+    </form>
+  </body>
+</html>

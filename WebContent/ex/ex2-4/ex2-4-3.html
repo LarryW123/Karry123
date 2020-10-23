@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Date对象</title>
+    <script type="text/javascript">
+      var now=new Date();
+      var hours=now.getHours();
+      if(hours>=6 && hours<=11)
+        alert("现在是"+hours+"点，早上好!");
+      else if(hours>11 && hours<=13)
+        alert("现在是"+hours+"点，中午好!");
+      else if(hours>13 && hours<=18)
+        alert("现在是"+hours+"点，下午好!");
+      else if(hours>18 && hours<=22)
+        alert("现在是"+hours+"点，晚上好!");
+      else
+        alert("现在是"+hours+"点，时间不早了，该睡觉了!");
+    </script>
+  </body>
+</html>

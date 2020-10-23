@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <title>组件示例</title>
+  <!--BootStrap设计的页面支持响应式的-->
+  <!--以下设置确保适当的绘制和触屏缩放-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--Bootstrap核心CSS文件-->
+  <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+  <!--引入JQuery的JS文件：一定要在BootStrap的JS文件的前面引入-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!--Bootstrap核心JavaScript文件-->
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- 矢量图标：应用到 <span> 标签上 -->
+  <!-- 图标类只能应用在不包含任何文本内容或子元素的元素上，不能和其它组件直接联合使用，即不能在同一个元素上与其他类共同存在。 -->
+  <div class="container-fluid">
+    <a href="javascript:void(0)" class="btn btn-danger btn-sm">
+      <span class="glyphicon glyphicon-search" aria-hidden="true">查询</span>
+    </a>
+  </div>
+  
+  <!-- 导航条 -->
+  <!-- navbar-fixed-top|navbar-fixed-bottom可以让导航条固定在顶(底)部 -->
+  <!-- navbar-default|navbar-inverse可以改变导航条主题色 -->
+  <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+      <!-- 品牌标志，可放文本或图片 -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="javascript:void(0)">首页</a>
+      </div>
+      <!-- 导航按钮列表用ul渲染，navbar-left和navbar-right可控制对齐方式-->
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="javascript:void(0)">宠物猫</a></li>
+        <li><a href="javascript:void(0)">宠物狗</a></li>
+        <li><a href="javascript:void(0)">水族馆</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="javascript:void(0)">登录</a></li>
+        <li><a href="javascript:void(0)">注册</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- 面板 -->
+  <div class="panel panel-info" style="width:300px;margin:0 auto;">
+    <div class="panel-heading">
+      <h3 class="panel-title">用户登录</h3>
+    </div>
+    <div class="panel-body" style="height:300px;">
+      <div class="input-group form-group">
+        <span class="input-group-addon" id="spanUserName">
+          <span class="glyphicon glyphicon-user" id="spanUserName"></span>
+        </span>
+        <input type="text" class="form-control" id="userName" aria-describedby="spanUserName" placeholder="请输入账号">
+      </div>
+      <div class="input-group form-group">
+        <span class="input-group-addon" id="spanPassword">
+          <span class="glyphicon glyphicon-lock" id="spanUserName"></span>
+        </span>
+        <input type="Password" class="form-control" id="Password" aria-describedby="spanPassword" placeholder="请输入密码">
+      </div>
+    </div>
+    <div class="panel-footer" style="text-align:right;">
+      <a class="btn btn-primary" href="javascript:void(0)" role="button">登录</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>表格样式</title>
+    <style type="text/css">
+      #maindiv{width:800px;background-color:#333;margin:0 auto;}
+      #topdiv{width:780px;height:20px;background-color:#000;background:url('images/logo.png');background-size:800px 100px;color:#fff;text-align:right;font-size:14px;padding:80px 20px 0px 0px;}
+      #centerdiv{width:800px;height:450px;}
+      #leftdiv{width:150px;margin:0px;height:450px;background-color:#643;float:left;}
+      #rightdiv{width:650px;margin:0px;height:450px;background-color:#992;float:left;}
+      #bottomdiv{width:800px;height:50px;line-height:50px;}
+      #bottomp{padding:0px;margin:0px;text-align:center;color:#fff;}
+      a:link{color:#fff;}
+      a:visited{color:#fff;}
+      a:hover{color:#fff;font-weight:bold;text-decoration:underline;}
+      a{text-decoration:none;}
+      table{border:1px solid white;border-collapse:collapse;}
+      th{border:1px solid white;text-align:center;background-color:#336;color:#fff;}
+      td{border:1px solid white;text-align:center;background-color:#ccf;color:#030;}
+    </style>
+  </head>
+  <body>
+    <div id="maindiv">
+      <!--顶部div-->
+      <div id="topdiv">
+        <a href="#">[修改密码]</a>&nbsp;<a href="#">[退出]</a>
+      </div>
+      <!--中部div-->
+      <div id="centerdiv">
+        <div id="leftdiv"></div>
+        <div id="rightdiv">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:80px;"><input type="checkbox" id="check_all"/><label for="check_all">全选</label></th>
+                <th style="width:80px;">编号</th>
+                <th style="width:100px;">姓名</th>
+                <th style="width:80px;">性别</th>
+                <th style="width:200px;">联系电话</th>
+                <th style="width:90px;">备注</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              	<td><input type="checkbox"/></td>
+              	<td>1</td>
+              	<td>孙小美</td>
+              	<td>女</td>
+              	<td>13907921111</td>
+                <td></td>
+              </tr>
+              <tr>
+              	<td><input type="checkbox"/></td>
+              	<td>2</td>
+              	<td>王大锤</td>
+              	<td>男</td>
+              	<td>13907923333</td>
+                <td></td>
+              </tr>
+              <tr>
+              	<td><input type="checkbox"/></td>
+              	<td>3</td>
+              	<td>赵大彤</td>
+              	<td>男</td>
+              	<td>13907925555</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--底部div-->
+  	  <div id="bottomdiv"><p id="bottomp">版权所有&reg;九江学院&nbsp;信息科学与技术学院</p></div>
+    </div>
+  </body>
+</html>

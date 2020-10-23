@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>隐藏/显示特效</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      //隐藏
+      $(document).ready(function(){
+        $("#hide").click(function(){
+          $("#div").hide(1000);
+        });
+      })
+      //显示
+      $(document).ready(function(){
+        $("#show").click(function(){
+          $("#div").show(1000);
+        });
+      })
+      //切换
+      $(document).ready(function(){
+        $("#toggle").click(function(){
+          $("#div").toggle(1000);
+        })
+      })
+    </script>
+    <style type="text/css">
+      #div{
+        text-align:center;width:200px;
+        height:200px;line-height:200px;
+        background-color:red;color:white;
+        margin:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" id="hide" value="隐藏"/>
+    <input type="button" id="show" value="显示"/>
+    <input type="button" id="toggle" value="切换"/>
+    <div id="div">隐藏/显示特效</div>
+  </body>
+</html>

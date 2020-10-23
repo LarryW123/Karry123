@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery常用样式操作</title>
+    <style type="text/css">
+      .title{
+        font-size:50px;
+        font-family: 黑体;
+        color:blue;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      function getCSS(){
+  	    alert("标签的颜色样式："+$("#div1").css("color"));//获取元素的样式
+      }
+      function setCSS(){
+		$(".cls2").css({"color":"white","background-color":"black"});//设置元素的样式
+		//等同于style="color:white;background-color:black;"
+      }
+      
+      function addClass(){
+		$("#lbl1").addClass("title");//通过给元素添加class来修改样式
+		//等同于class="title"
+      }
+      function removeClass(){
+		$("#lbl1").removeClass("title");//通过删除元素的class来修改样式
+      }
+
+    </script>
+    
+    <style type="text/css">
+      #div1{
+        color:blue;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id="div1" class="cls1" >Hello jQuery(id:div1 class:cls1)</div>
+    <div id="div2" class="cls1">Hello jQuery(id:div2 class:cls1)</div>
+    <div id="div3" class="cls2">Hello jQuery(id:div3 class:cls2)</div>
+    <div id="div4" class="cls2">Hello jQuery(id:div4 class:cls2)</div>
+    <input type="button" value="获取id=div1的元素样式" onclick="getCSS()"/>
+    <input type="button" value="设置class=cls2的元素样式" onclick="setCSS()"/>
+    <br/><hr/>
+    
+    <label id="lbl1"><b>Hello jQuery</b></label><br/><br/>
+    <input type="button" id="btnAddClass" value="添加元素的class" onclick="addClass()"/>
+    <input type="button" id="btnRemoveClass" value="删除元素的class" onclick="removeClass()"/>
+    <br/><hr/>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>location</title>
+      <script type="text/javascript">
+        function href(){
+          window.location.href="http://www.baidu.com";
+        } 
+        function rep(){
+          window.location.replace("http://www.baidu.com");
+        } 
+        function rel(){
+  		  window.location.reload();
+  		  //刷新页面，等同于
+  		  //window.location.href=window.location.href;
+        } 
+      </script>
+  </head>
+  <body>
+    <input type="button" value="location跳转" onclick="href()"/>
+    <input type="button" value="replace跳转" onclick="rep()"/>
+    <input type="text"/>
+    <input type="button" value="reload刷新" onclick="rel()"/>
+  </body>
+</html>
+

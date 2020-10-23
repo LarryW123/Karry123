@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <title>管理员页面</title>
+  <!-- easyUI核心CSS样式 -->
+  <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+  <!-- easyUI主体图标样式 -->
+  <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+  <!-- easyUI示例样式 -->
+  <link rel="stylesheet" type="text/css" href="easyui/demo.css">
+  <!-- jquery脚本文件 -->
+  <script type="text/javascript" src="easyui/jquery.min.js"></script>
+  <!-- easyUI的jquery脚本 -->
+  <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+  <!-- 国际化，让datagrid分页栏显示中文 -->
+  <script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+  <!-- 自定义超链接样式 -->
+  <style type="text/css">
+    a{color:blue;text-decoration:none}
+    a:vlink{color:blue}
+    a:hover{color:red}
+  </style>
+</head>
+<body>
+  <div class="easyui-layout" data-options="fit:true">
+    <!-- 顶部logo -->
+    <div data-options="region:'north'" style="height:60px;background-image:url('img/logo.png');background-repeat:no-repeat;">
+      <div style="font-size:12px;font-fimaly:微软雅黑;color:#636363;padding-right:20px;padding-top:40px;text-align:right">
+        <label>欢迎您[管理员]</label>&nbsp;&nbsp;
+        <a href="javascript:void(0)">退出登录</a>
+      </div>
+    </div>
+    <!-- 底部信息 -->
+    <div data-options="region:'south'" style="height:30px;line-height:30px">
+      <div align="center" style="font-size:12px">Copyright &copy; 2000-2010 佳码商城 版权所有</div>
+    </div>
+    <!-- 左侧导航 -->
+    <div data-options="region:'west'" style="width:200px;">
+      <div class="easyui-accordion" style="width:100%;">
+        <div title="用户管理" data-options="iconCls:'icon-filter'">
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">会员管理</a>
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">商铺管理</a>
+        </div>
+        <div title="商品管理" data-options="iconCls:'icon-tip'">
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">商品类别</a>
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">商品品牌</a>
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">商品管理</a>
+        </div>
+        <div title="通知公告" data-options="iconCls:'icon-help'">
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">网站公告</a>
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">网站动态</a>
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">网站新闻</a>
+        </div>
+        <div title="数据统计" data-options="iconCls:'icon-help'">
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">进货统计</a>
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">出货统计</a>
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">存货统计</a>
+        </div>
+        <div title="店商评价" data-options="iconCls:'icon-help'">
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width:100%;text-align:left;">差评统计</a>
+        </div>
+      </div>
+    </div>
+    <!-- 右侧帮助 -->
+    <div data-options="region:'east'" title='使用帮助'style="width:200px;">
+      <label>访问http://www.jeasyui.net/学习各元素的渲染方法</label>
+    </div>
+    <!-- 主体部分 -->
+    <div data-options="region:'center'" >
+      <!-- 数据表格 -->
+      <table class="easyui-datagrid" style="width:100%;height:100%" data-options="toolbar:'#tb',singleSelect:true,fit:true,pagination:true,pageSize:20,pageList:[10,20,50]">
+        <thead>
+          <tr>
+            <th data-options="field:'selector',checkbox:true"></th>
+            <th data-options="field:'id',width:160,align:'center'">会员卡号</th>
+            <th data-options="field:'userName',width:100,align:'center'">姓名</th>
+            <th data-options="field:'email',width:200,align:'center'">电子邮箱</th>
+            <th data-options="field:'sex',width:60,align:'center'">性别</th>
+            <th data-options="field:'QQ',width:120,align:'center'">QQ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>123456789</td>
+            <td>张三</td>
+            <td>1357913579@qq.com</td>
+            <td>男</td>
+            <td>1357913579</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>987654321</td>
+            <td>李四</td>
+            <td>2468024680@qq.com</td>
+            <td>女</td>
+            <td>2468024680</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <!-- 工具栏 -->
+      <div id="tb">
+        <!-- 组合框 -->
+        <select class="easyui-combobox">
+          <option value="opt1">选项按钮1</option>
+          <option value="opt2">选项按钮2</option>
+          <option value="opt3">选项按钮3</option>
+        </select>
+        <!-- 菜单栏 -->
+        <a href="#" class="easyui-splitbutton" data-options="menu:'#m1',iconCls:'icon-edit'">菜单栏</a>
+        <div id="m1">
+          <div data-options="iconCls:'icon-undo'">带图标的</div>
+          <div class="menu-sep"></div>
+          <div>不带图标</div>
+          <div>
+            <span>带下级菜单</span>
+            <div>
+              <div data-options="iconCls:'icon-redo'">下级菜单1</div>
+              <div>下级菜单2</div>
+            </div>
+          </div>
+        </div>
+        <!-- 文本框 -->
+        <input class="easyui-textbox" data-options="prompt:'请输入姓名',iconCls:'icon-man'"/>
+        <!-- 日期框 -->
+        <input class="easyui-datebox" />
+        <!-- 数字调整器 -->
+        <input class="easyui-numberspinner" value="100" data-options="increment:5,min:50,max:150,required:true"/>
+        <!-- 链接按钮 -->
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-search'" id="a_search" >查找</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="javascript:$('#dlg_user').dialog('open')">添加</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-edit'">修改</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除</a>
+      </div>
+      
+      <!-- 添加|修改对话框 -->
+      <div id="dlg_user" class="easyui-dialog" data-options="title:'会员信息',buttons:'#bt_dlg_user',closed:true" style="width:240px;height:300px;padding:10px"  >
+        <form id="fm_user" method="post">
+          <div><label>卡号：</label><input name="id" class="easyui-textbox"></div>
+          <div><label>姓名：</label><input name="userName" class="easyui-textbox"></div>
+          <div><label>邮箱：</label><input name="email" class="easyui-textbox"></div>
+          <div><label>性别：</label><input name="sex" class="easyui-textbox"></div>
+          <div><label>QQ号：</label><input name="QQ" class="easyui-textbox"></div>
+        </form>
+      </div>
+      <div id="bt_dlg_user">
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'">保存</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-no'" onclick="javascript:$('#dlg_user').dialog('close')">退出</a>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

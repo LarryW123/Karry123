@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>计时器</title>
+    <script type="text/javascript">
+      var timer;
+      function display(){ 		 
+        date=new Date();
+        var now=date.toLocaleTimeString();
+        document.getElementById("clock").innerHTML=now;	
+      }
+      function start(){
+        timer=window.setInterval("display()",1000);
+      }
+      function pause(){
+        window.clearInterval(timer);
+      }    
+    </script>
+  </head>       
+  <body>
+    <button onclick="start();">启动时钟</button>
+    <button onclick="pause();">暂停时钟</button>
+    <p id="clock"></p>
+  </body>
+</html>

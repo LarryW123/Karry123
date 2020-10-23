@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Plupload使用指南</title>
+    <!-- 首先需要引入plupload的源代码 -->
+    <script type="text/javascript" src="Plupload/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="Plupload/jquery-ui/jquery-ui.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="Plupload/js/plupload.full.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="Plupload/js/jquery.ui.plupload/jquery.ui.plupload.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="Plupload/js/i18n/zh_CN.js" charset="UTF-8"></script>
+  </head>
+  <body>
+    <!-- 这里我们只使用最基本的html结构：一个“浏览……”按钮，一个“上传”按钮-->
+    <!-- 如果希望选中文件则立即上传，只需要绑定相应事件，那么“上传”按钮也可以不要-->
+    <button id="browse">浏览……</button>
+    <button id="startUpload">上传</button>
+    
+    <script>
+      //1、实例化一个plupload上传对象，并配置相应的参数：这里只象征性的配置几个必要参数
+      var uploader = new plupload.Uploader({
+        browse_button:'browse',//触发文件选择对话框的按钮，为那个元素id
+        url:'index.html',//服务器端的上传页面地址
+        flash_swf_url:'js/Moxie.swf',//当需要使用swf方式进行上传时需要配置该参数
+        silverlight_xap_url:'js/Moxie.xap'//当需要使用silverlight方式进行上传时需要配置该参数
+      });    
+  
+      //2、在实例对象上调用init()方法进行初始化
+      uploader.init();
+  
+      //3、绑定各种事件，并在事件监听函数中完成想做的事
+      uploader.bind('FilesAdded',function(uploader,files){
+        //添加文件时触发
+        alert("已在队列中添加"+files[0].name+"，文件大小"+files[0].origSize+"B");
+      });
+      uploader.bind('UploadProgress',function(uploader,file){
+        //文件上传过程中不断触发，可以用此事件来显示上传进度
+      });
+      uploader.bind('FileUploaded',function(uploader,file){
+        //某个文件上传完成后触发
+        alert(file.name+"文件上传完成:"+file.origSize+"B");
+      });
+      uploader.bind('UploadComplete',function(uploader,files){
+        //队列中所有文件上传完成后触发
+        alert(files[0].name+"文件上传完成:"+files[0].origSize+"B");
+      });
+  
+      //4、给"开始上传"按钮注册事件
+      document.getElementById('startUpload').onclick = function(){
+        uploader.start(); //调用实例对象的start()方法开始上传文件，当然你也可以在其他地方调用该方法
+      }
+    </script>
+  </body>
+</html>

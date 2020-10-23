@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>周期性时钟</title>
+    <script type="text/javascript">
+      var timer;
+      var time = 9;
+      function cnt(){
+        var btn = document.getElementById("btn");
+        btn.value = "我已阅读并同意条款"+time;
+        time--;
+        if(time<0){
+          btn.disabled = 0;//0可用，非0不可用
+          btn.value = "我已阅读并同意条款";
+          window.clearInterval(timer);
+        }
+      }
+      function begin(){
+        timer = window.setInterval("cnt()",1000);
+      }
+    </script>
+  </head>
+  <body onload="begin();">
+    <div style="width:600px;margin:auto;border:1px solid black;padding:10px">
+      <h1>用户注册协议和隐私政策</h1><hr/>
+      <h4>亲爱的用户，在您注册为用户的过程中，您需要完成我们的注册流程并通过点击同意的形式在线签署以下协议，请您务必仔细阅读、充分理解协议中的条款内容后再点击同意。</h4><hr/>
+      <h3>服务协议</h3>
+      <pre>
+        1.总则
+        2.服务简介
+        3.服务条款的修改
+        4.服务变更、中断、终止
+        5.使用规则
+        6.版权声明
+        7.用户隐私制度
+        8.用户的账号、密码和安全性
+        9.拒绝提供担保
+        10.有限责任
+        11.网络会员服务信息的存储及限制
+        12.用户管理
+        13.保障
+        14.结束服务
+        15.通告
+        16.参与广告策划
+        17.邮件内容的所有权
+        18.法律
+      </pre>
+      <h3>隐私政策</h3>
+      <p>隐私政策明确了我们产品与/或服务所收集、使用及共享个人信息的类型和方式及用途；明确了用户查询、更正和删除个人信息的方式，具体提纲如下：</p>
+      <pre>
+        1.隐私政策的确认和接纳
+        2.信息收集
+        3.信息使用
+        4.信息共享、转让和披露
+        5.信息保存及跨境传输
+        6.Cookie的使用
+        7.个人敏感信息提示
+        8.信息安全与保护
+        9.信息安全事件处置
+        10.未成年人信息保护
+        11.用户个人信息管理
+        12.从中国大陆地区以外访问我们的网站
+        13.隐私政策的适用范围
+        14.隐私政策的修改
+        15.法律
+      </pre>
+      <h3>【审慎阅读】</h3>
+      <p>您在申请注册流程中点击同意前，请您务必审慎阅读、充分理解协议中相关条款内容，尤其是与您约定免除或限制责任的条款，以及字体加粗标识的重要条款。</p>
+      <h3>【请您注意】</h3>
+      <p>如果您不同意上述协议或其中任何条款约定，请您停止注册。如果您按照注册流程提示填写信息、阅读并点击同意上述协议且完成全部注册流程后，即表示您已充分阅读、理解并接受协议的全部内容。</p>
+      <p>如果您对以上内容有疑问，请联系：it@jju.edu.cn。</p>
+      <p>点击同意即代表您已阅读并同意《服务协议》和《隐私政策》，并同意我们将您的订单信息共享给为完成此订单所必须的第三方合作方。</p>
+      <input id="btn" type="button" disabled="disabled" value="我已阅读并同意条款" style="width:100%;height:40px;font-size:20px"></input>
+    </div>
+  </body>
+</html>
+

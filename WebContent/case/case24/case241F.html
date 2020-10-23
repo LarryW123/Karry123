@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>容器属性：align-content</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- 
+    align-content决定项目在多轴时的对齐方式，可能取值：
+      1、flex-start：与交叉轴的起点对齐
+      2、flex-end：与交叉轴的终点对齐
+      3、center：与交叉轴的中点对齐
+      4、space-between：与交叉轴两端对齐
+      5、space-around：平分间隔
+      6、stretch(默认值)：占满整个交叉轴
+      (联想)word中表格内容的对齐方式：
+           - 顶部左  顶部中  顶部右
+           - 中部左  中部中  中部右
+           - 底部左  底部中  底部右
+    -->
+    <style type="text/css">
+      #d1{width:300px;}
+      #d2{width:100px;}
+      #d3{width:200px;}
+      #d4{width:400px;}
+      #d5{width:200px;}
+      #d6{width:200px;}
+      #d7{width:300px;}
+      #d8{width:300px;}
+      .box{
+        height:200px;line-height:200px;text-align:center;
+        background-color:#333;color:#fff;border:1px solid red;
+      }
+      .box1{
+        height:800px;display:flex;
+        flex-flow:row wrap;justify-content:space-between;
+        align-items:flex-start;align-content:flex-start;
+      }
+      .box2{
+        height:800px;display:flex;
+        flex-flow:row wrap;justify-content:space-between;
+        align-items:flex-start;align-content:flex-end;
+      }
+      .box3{
+        height:800px;display:flex;
+        flex-flow:row wrap;justify-content:space-between;
+        align-items:flex-start;align-content:center;
+      }
+      .box4{
+        height:800px;display:flex;
+        flex-flow:row wrap;justify-content:space-between;
+        align-items:flex-start;align-content:space-between;
+      }
+      .box5{
+        height:800px;display:flex;
+        flex-flow:row wrap;justify-content:space-between;
+        align-items:flex-start;align-content:space-around;
+      }
+      .box6{
+        height:800px;display:flex;
+        flex-flow:row wrap;justify-content:space-between;
+        align-items:flex-start;align-content:stretch;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 修改class值，观察排列情况 -->
+    <div class="box1">
+      <div id="d1" class="box">div1</div>
+      <div id="d2" class="box">div2</div>
+      <div id="d3" class="box">div3</div>
+      <div id="d4" class="box">div4</div>
+      <div id="d5" class="box">div5</div>
+      <div id="d6" class="box">div6</div>
+      <div id="d7" class="box">div7</div>
+      <div id="d8" class="box">div8</div>
+    </div>
+  </body>
+</html>

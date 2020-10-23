@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>AJAX+JSON</title>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#btn").click(function(){
+      $.post("/Demo/servlet/case741",
+        function(data){
+          var jsonObj = JSON.parse(data.replace(/'/g, '"'));//用正则表达式把单引号替换为双引号
+          //不推荐这种做法，因为你不确定什么时候需要保留原有的单引号
+          //推荐在后台拼接JSON字符串的时候使用转义字符
+          var str ="";
+          str += "学校:"+jsonObj.学校 + "<br/>";
+          str += "地址:"+jsonObj.地址+ "<br/>";
+          str += "班级:"+"<br/>";
+          //遍历JSON对象
+          str += "<table border='1px'>";
+          for(var i=0;i<jsonObj.班级.length;i++){
+            str += "<tr>";
+            if(i==0){
+              for(j in jsonObj.班级[i]){
+                str += "<td>";
+                str += j + "</td>";
+              }
+              str += "</tr>";
+            }
+            for(j in jsonObj.班级[i]){
+              str += "<td>";
+              str += jsonObj.班级[i][j] + "</td>";
+            }
+            str += "</tr>";
+          }
+          str += "</table>";
+          $("#sp")[0].innerHTML = str;
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+<form>
+  <button id="btn" type="button">发送AJAX请求</button><br/><br/>
+  <span id="sp" style="color:red"></span><br/><br/>
+</form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <title>插件示例</title>
+  <!--BootStrap设计的页面支持响应式的-->
+  <!--以下设置确保适当的绘制和触屏缩放-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--Bootstrap核心CSS文件-->
+  <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+  <!--引入JQuery的JS文件：一定要在BootStrap的JS文件的前面引入-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!--Bootstrap核心JavaScript文件-->
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- 自定义脚本 -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $('.carousel').carousel({
+      interval:3000
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="container">
+  <!-- 模态框 -->
+  <a type="button" href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#myModal">打开模态框</a>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">标题</h4>
+        </div>
+        <div class="modal-body">
+          <h5>主体</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-success">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 工具提示 -->
+  <a href="javascript:void(0)" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="这里放置提示信息">工具提示</a>
+  
+  <!-- 轮播图 -->
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- 游标点 -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+    
+    <!-- 轮播图片 -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" align="center"><img src="img/carousel/1.jpg" alt="..."></div>
+      <div class="item" align="center"><img src="img/carousel/2.jpg" alt="..."></div>
+      <div class="item" align="center"><img src="img/carousel/3.jpg" alt="..."></div>
+      <div class="item" align="center"><img src="img/carousel/4.jpg" alt="..."></div>
+    </div>
+    <!-- 控制按钮 -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery常用事件</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      function js(){//普通的JS函数
+		alert("Hello JavaScript!");
+      }
+      //$(document).ready()类似于JS中的window.onload()和html中的onload="fn()"，但也有差别：
+      //差别一：执行时间
+      //onload="fn()"在所有资源都准备完成之后才执行，且做不到js和html分离，强烈不建议
+      //window.onload()必须等到所有资源(包括图片等)加载完毕后才能执行
+      //$(document).ready()只要DOM树绘制完毕就可以执行，不必等到所有资源加载和渲染完毕
+      //差别二：同时执行的个数
+      //可以利用onload="fn1(),fn2()"同时执行多个，但是格式极其丑陋
+      //window.onload()不能同时编写多个，即使有多个window.onload()，只会执行一个
+      //$(document).ready()可以同时编写多个，并且都可以得到执行 
+      //另外，$(document).ready(function(){});还有更为简便的写法：
+      //$(function(){});
+	  $(document).ready(function(){//文档就绪事件
+        alert("Hello World!");
+	  });
+	  
+	  $(document).ready(function(){
+        $("#btnJQ").click(function(){//按钮单击事件，当按钮获得焦点时，也可用space或enter键激活
+		  alert("Hello jQuery!");
+        });
+      });
+	  
+	  $(document).ready(function(){
+	    $("#lbl").mouseover(function(){//鼠标悬停事件
+	    	$("#lbl").css("color","red");
+	    });
+	    $("#lbl").mouseout(function(){//鼠标移开事件
+	    	$("#lbl").css("color","black");
+	    });
+      });
+	  
+	  //BODY中：oncontextmenu="return false"取消鼠标右键
+	  //BODY中：onselectstart="return false"禁止选中网页内容
+	  //在JS中：window.document.oncontextmenu = function(){return false;}取消鼠标右键
+	  $(document).ready(function(){//禁用鼠标右键
+        $(document).bind("contextmenu",function() { 
+          //alert("该网页禁用鼠标右键!"); 
+          return false; 
+        }); 
+	  });
+	  
+	  $(document).ready(function(){//禁止选中网页内容
+        $(document).bind("selectstart",function() { 
+          return false; 
+        }); 
+	  });
+    </script>
+  </head>
+  <body>
+    <label id="lbl">鼠标停上来试试</label><br/>
+    <label>此页面禁用鼠标右键，禁止选中网页内容</label><br/>
+    <input type="button" id="btnJS" value="JavaScript提醒" onclick="js();"/>
+    <input type="button" id="btnJQ" value="jQuery提醒"/>
+  </body>
+</html>

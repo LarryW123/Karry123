@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <title>表单控件</title>
+  <!--BootStrap设计的页面支持响应式的-->
+  <!--以下设置确保适当的绘制和触屏缩放-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--Bootstrap核心CSS文件-->
+  <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+  <!--引入JQuery的JS文件：一定要在BootStrap的JS文件的前面引入-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!--Bootstrap核心JavaScript文件-->
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- 表单重要属性---form-horizontal：将label标签和控件组水平并排布局 -->
+  <form class="form-horizontal">
+    <!-- 将控件包裹在class="form-group"的<div>中可以获得最好的排列 -->
+    <!-- form-group-lg和form-group-sm可调整尺寸 -->
+    <div class="form-group">
+      <label for="userName" class="col-sm-2 control-label">userName</label>
+      <div class="col-sm-4">
+        <!-- 控件重要属性---form-control：对<input>、<textarea> 和 <select>元素设置默认属性 width:100% -->
+        <!-- placeholder可以显示提示文本 -->
+        <input type="text" class="form-control" id="userName" placeholder="请输入账号">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="Password" class="col-sm-2 control-label">Password</label>
+      <div class="col-sm-4">
+        <!-- BootStrap能支持的input包括：text、password、datetime、datetime-local、date、month、time、week、number、email、url、search、tel 和 color -->
+        <!-- 只要input正确赋予了type属性，就能自动渲染 -->
+        <!-- input-lg和input-sm可调整控件尺寸 -->
+        <input type="Password" class="form-control" id="Password" placeholder="请输入密码">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="intro" class="col-sm-2 control-label">intro</label>
+      <div class="col-sm-4">
+        <!-- rows可以控制行数 -->
+        <textarea id="intro" class="form-control" rows="3" placeholder="这家伙很懒，什么都没有留下"></textarea>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="col-sm-2 control-label">sex</label>
+      <div class="col-sm-4">
+        <!-- radio-inline可以使radio控件排列在一行 -->
+        <label class="radio-inline"><input type="radio" name="sex" id="1" value="1" />男</label>
+        <label class="radio-inline"><input type="radio" name="sex" id="0" value="0" />女</label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="col-sm-2 control-label">hobby</label>
+      <div class="col-sm-4">
+      <!-- checkbox-inline可以使checkbox控件排列在一行 -->
+        <label class="checkbox-inline"><input type="checkbox" name="hobby" id="1" value="1" />音乐</label>
+        <label class="checkbox-inline"><input type="checkbox" name="hobby" id="2" value="2" />美术</label>
+        <label class="checkbox-inline"><input type="checkbox" name="hobby" id="3" value="3" />舞蹈</label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="col-sm-2 control-label">course</label>
+      <div class="col-sm-4">
+      <!-- 增加multiple属性可显示多行 -->
+        <select class="form-control">
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>JavaScript</option>
+          <option>jQuery</option>
+          <option>Servlet</option>
+          <option>JSP</option>
+          <option>MVC</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- 按钮样式：btn-default|btn-primary|btn-success|btn-info|btn-warning|btn-danger|btn-link -->
+    <input class="btn btn-warning btn-lg" type="button" value="由输入框渲染">
+    <!-- 按钮尺寸：btn-lg|btn-sm|btn-xs -->
+    <button class="btn btn-success btn-sm" disabled="disabled">由按钮渲染</button>
+    <!-- 按钮禁用：disabled="disabled"；按钮激活：active -->
+    <a class="btn btn-primary btn-xs active" href="javascript:void(0)" role="button">由超链接渲染</a>
+  </form>
+</body>
+</html>

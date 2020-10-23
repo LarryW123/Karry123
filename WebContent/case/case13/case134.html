@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>图片热点</title>
+  </head>
+  
+  <body>
+    <!-- 说明： -->
+    <!-- 1、ismap属性:"服务器端"图像映射机制，它只可以用在<a>标签标识的超链接里面 -->
+    <!-- 当用户在 ismap 图像上单击了某处时 -->
+    <!-- 浏览器会自动把鼠标的 x、y 位置（相对于图像的左上角）发送到服务器端 -->
+    <!-- 2、usemap属性:"客户端"图像映射机制 -->
+    <!-- 消除了服务器端对鼠标坐标的处理，以及由此带来的网络延迟问题 -->
+    <!-- 3、map标签:通过内嵌的area标签，定义可点击区域的图像映射 -->
+    <img src="images/jx.png" ismap="ismap" usemap="#map" alt="test" /> 
+    <map id="map" name="map">
+      <area shape="circle" coords="150,150,20" href ="images/fz.png" alt="圆形" />
+      <area shape="rect" coords="50,50,100,100" href ="images/jj.png" alt="矩形" />
+    </map>
+  </body>
+</html>

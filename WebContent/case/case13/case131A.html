@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>网页中插入本地媒体</title>
+  </head>
+  <body style="color:#fff; background-color: #000;" scroll="no">
+    <label>1、使用img插入图片(本站图片：Bon Jovi)</label><br/>
+    <img src="images/jovi.jpg" alt="暂无图片" width="300px" height="200px"/><br/>
+    
+    <label>2、使用embed插入多媒体(本站音乐：Santa Fe.wav)</label><br/>
+    <!-- embed用于在页面中插入多媒体元素： -->
+    <!-- 不足之处：无法通过HTML4和XHTML验证 -->
+    <!-- 多媒体格式限制，转换为其他格式，不能保证能在浏览器中正确运行 -->
+    <!-- 放置到embed的元素，会被自动播放 -->
+    <embed src="music/Santa Fe.wav" width="300px" height="60px"/><br/>
+    <!-- 由于embed允许在页面中插入插件，所以常用于播放Flash视频 -->
+    <!-- 但如果浏览器不支持Flash，那么视频将无法播放 -->
+    <!-- 随着Flash退出历史舞台，各大浏览器都停止了对Flash的更新 -->
+    <!-- 另外，iPad和 iPhone都不支持Flash视频 -->
+    
+    <label>3、使用object插入多媒体(本站音乐：Santa Fe.wav)</label><br/>
+    <!-- object用于在页面中插入多媒体元素： -->
+    <!-- 作用与embed几乎完全一致，不同之处： -->
+    <!-- <object>仅支持IE，其data属性等同于src-->
+    <!-- <embed>标签支持旧版本的IE和其他的浏览器（如FF、chrome等） -->
+    <!-- 所以在写页面的时候，最好是将embed的内容嵌入到object标签内 -->
+    <!-- 这样就可以防止有的浏览器出现不兼容的情况了 -->
+    <object id="obj" width="300px" height="60px">
+      <param value="music/Santa Fe.wav" />
+      <embed width="300px" height="60px" src="music/Santa Fe.wav" />
+    </object>
+  </body>
+</html>

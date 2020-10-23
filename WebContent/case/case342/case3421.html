@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>数组定义</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/JavaScript">
+      var arr1 = new Array();//声明数组
+      document.write("arr1有"+arr1.length+"个数组元素<br/>");
+      
+      var arr2 = new Array(2);//声明了有2个元素的数组
+      document.write("arr2有"+arr2.length+"个数组元素<br/>");
+      
+      var arr3 = new Array("a",true,5);//声明了有3个数组元素的数组，并赋值
+      document.write("arr3有"+arr3.length+"个数组元素<br/>");
+      
+      var arr4 = [1,2,3,4];//声明了有4个数组元素的数组，并赋值
+      document.write("arr4有"+arr4.length+"个数组元素<br/>");
+      arr4[7] = 5;
+      arr4.push(6);
+      arr4.length += 1;
+      document.write("arr4有"+arr4.length+"个数组元素<br/>");
+    </script>
+  </head>
+  
+  <body>
+
+  </body>
+</html>

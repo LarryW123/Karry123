@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>highcharts示例：簇状柱形图</title>
+    <style type="text/css">
+      #columnChart {
+        width:600px;
+        height:400px;
+        margin:0 auto;
+      }
+    </style>
+    <script src="highcharts/code/highcharts.js"></script>
+  </head>
+  <body>
+    <div id="columnChart"></div>
+    
+    <script type="text/javascript">
+      $(document).ready(function(){//方法级图表渲染:jQuery
+        $('#columnChart').highcharts({
+          //chart:...
+        });
+      });
+    </script>
+    
+    <script type="text/javascript">
+      Highcharts.chart('columnChart',{//方法级图表渲染:js
+        chart:{//图表类型，如柱状图(column)、折线图(line)、饼图(pie)
+          type:'column'
+        },
+        title:{//图表标题
+          text:'月平均降雨量'
+        },
+        subtitle:{//图表副标题
+          text:'来源:江西省气象局'
+        },
+        xAxis:{//横坐标轴
+          categories:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+        },
+        yAxis:{//纵坐标轴
+          title:{text:'降雨量 (mm)'}
+        },
+        tooltip:{//图表提示框
+          headerFormat:'<span style="font-size:10px">'//格式化顶部
+                      +'  {point.key}平均降雨量'
+                      +'</span>'
+                      +'<hr/>',
+          pointFormat: '<table>'//格式化中部
+                      +'  <tr style="font-size:10px">'
+                      +'    <td style="color:{series.color};padding:0">{series.name}:</td>' 
+                      +'    <td style="padding:0"><b>{point.y:.1f} mm</b></td>'
+                      +'  </tr>'
+                      +'</table>',
+          footerFormat:'<hr/>'//格式化底部
+                      +'<span style="font-size:10px">'
+                      +'  来源:江西省气象局'
+                      +'</span>',
+          shared:true,//允许合并同组
+          useHTML:true//允许使用HTML标记
+        },
+        credits:{//版权信息
+          //enabled:false,//不显示版权信息
+          text:'佳码版权所有',//版权信息显示的文字
+          href:'http://www.51jm.cn',// 链接地址
+          position:{//位置设置 
+            align:'right',
+            verticalAlign:'top',
+            x:0,
+            y:380
+          },
+          style:{//样式设置
+            cursor:'pointer',
+            color:'#ccc',
+            fontSize:'10px'
+          }
+        },
+        series:[
+                 {name:'九江',data:[49.9,71,96.4,99.2,144,176,135.6,148.5,216.4,194,95.6,54.4]},
+                 {name:'南昌',data:[83.6,78.8,98.5,93.4,106,84.5,105,104,91.2,83.5,106.6,92.3]},
+                 {name:'赣州',data:[48.9,38.8,39.3,41.4,47.1,48.3,59,59.6,52.4,65.2,59.3,51.2]},
+                 {name:'上饶',data:[42.4,33.2,34.5,39.7,52.6,75,57.4,60.4,47.6,39.1,46.8,51.1]}
+               ]
+      });
+    </script>
+  </body>
+</html>

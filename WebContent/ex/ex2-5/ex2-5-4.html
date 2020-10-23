@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>插入DOM节点</title>
+    <script type="text/JavaScript">
+    var i=0
+    function appendNode(objNode, strText){
+      i++;
+      var objNewNode = document.createElement("P");
+      var objTextNode = document.createTextNode(strText+i);
+      objNode.appendChild(objNewNode);
+      objNewNode.appendChild(objTextNode);
+    }
+    function insertNode(objNode, objBrother, strText){
+      i++;
+      var objNewNode = document.createElement("P");
+      var objTextNode = document.createTextNode(strText+i);
+      objNode.insertBefore(objNewNode, objBrother);
+      objNewNode.appendChild(objTextNode);
+    }
+    </script>
+  </head>
+  <body id="myBody">
+    <h2>DOM节点的插入</h2>
+    <hr>
+    <p onclick="appendNode(myBody,'结尾插入的文本')">段落一</p>
+    <p onclick="insertNode(myBody, myBody.childNodes[4], '开头插入的文本')">段落二</p>
+    <p>段落三</p>
+  </body>
+</html>

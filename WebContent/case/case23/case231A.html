@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>边框设置</title>
+    <style type="text/css">
+      /* border四边设置 ,块元素也可设置宽高*/
+      .b1{
+        border: 10px dashed red;
+        width:500px;height:100px;
+      }
+      /*border单边设置*/
+      .b2{
+        border-left:10px solid green;
+        border-top:10px double #0f0;
+        border-right:10px dotted #00ff00;
+        border-bottom:10px none rgb(0,255,0);
+        width:500px;height:100px;
+      }
+      /*border单边3D设置*/
+      .b3{
+        border-left:10px groove rgb(0,0,255);
+        border-top:10px ridge rgba(0,0,255,0.5);
+        border-right:10px inset hsl(240,100%,50%);
+        border-bottom:10px outset hsla(240,100%,50%,0.3);
+        width:500px;height:100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="b1">border-块级元素的边框设置，四边设置格式为：
+      <br>border:width style color
+    </p>
+    <p class="b2">border既可设置四边，也可设置单边，单边设置格式为：
+      <br> -border-left: width、style、color
+      <br> -border-right: width、style、color
+      <br> -border-top: width、style、color
+      <br> -border-bottom: width、style、color
+    </p>
+    <p class="b3">设置border的3D边框，格式同上
+    </p>
+  </body>
+</html>

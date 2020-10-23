@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery常用键盘事件</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+	  $(document).ready(function(){
+	    $("#btn1").click(function(){//按钮单击事件
+		  alert("按回车键才能激活我!");
+	    });
+	  });
+	  
+	  //keydown和 keyup提供一个代码，表示哪一个键被按下
+	  //keypress表示被输入哪个字符
+	  //所以，若想捕获敲击了哪个特殊键的话，如回车、退格、方向键等，使用 keydown()或keyup()更好
+	  $(document).ready(function(){
+        $(document).keypress(function(){//按键按下事件
+		  alert("按任意键都可以激活我!");
+        });
+      });
+	  
+	  //如果希望指定键来激活，建议使用keydown，例如：
+	  $(document).ready(function(){//回车键激活
+        $(document).bind("keydown",function(e){ 
+          if(e.keyCode==13){
+        	  $("#btn1").click();
+          }
+        }); 
+	  });
+	  
+	  $(document).ready(function(){//禁用F5键
+        $(document).bind("keydown",function(e){ 
+          if(e.keyCode==116){
+		    e.keyCode = 0;
+            alert("禁用F5键刷新网页!");
+            return false; 
+          }
+        }); 
+	  });
+
+    </script>
+  </head>
+  <body>
+    <label>按任意键可激活脚本</label><br/>
+    <label>此页面禁用F5键刷新</label><br/>
+    <input type="button" id="btn1" value="按回车可以激活的按钮"/>
+  </body>
+</html>

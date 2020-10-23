@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>try-catch捕获异常</title>
+    <script type="text/javascript">  
+      function test(){
+      	try{
+      		var i=10;
+      		var j=i/2;
+      		alert(j);
+      		alert(k);
+      	} 
+		catch(e){
+			alert(e.name + ":" + e.message);
+		}
+		finally{
+			alert("不管正确与否，我都被执行！");
+		}
+      }
+    </script>
+  </head>
+  
+  <body>
+    <input type="button" value="错误测试" onclick="test();"/>
+  </body>
+</html>

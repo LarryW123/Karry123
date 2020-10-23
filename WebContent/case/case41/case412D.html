@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>自定义动画特效</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!--
+          提示：几乎可以用 animate()方法来操作所有 CSS属性
+          注意：当使用 animate()时，必须使用 Camel标记法书写所有的属性名
+          即{属性名1:'属性值1',属性名2:'属性值3'……}
+          比如，必须使用 paddingLeft 而不是 padding-left
+          同时，色彩动画并不包含在核心 jQuery 库中。若需要生成颜色动画，您需要下载 Color Animations插件
+    -->
+    <script type="text/javascript">
+      //自定义动画
+      $(document).ready(function(){
+        $("#animate").click(function(){
+          $("#div").animate(
+            {
+              width:'400px',
+              height:'400px',
+              backgroundcolor:'blue'
+            },
+            1000
+          );
+        });
+      })
+    </script>
+    <style type="text/css">
+      #div{
+        text-align:center;width:200px;
+        height:200px;line-height:200px;
+        background-color:red;color:white;
+        margin:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" id="animate" value="自定义动画"/>
+    <div id="div">隐藏/显示特效</div>
+  </body>
+</html>

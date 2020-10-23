@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>容器属性：flex-wrap</title>
+    <!-- 
+    flex-wrap决定项目的换行方式，可能取值：
+	  1、nowrap(默认)：不换行，所有项目等比压缩
+	  2、wrap：换行，第一行在上方
+	  3、wrap-reverse：换行，第一行在下方
+    -->
+    <style type="text/css">
+      .box{
+        width:400px;height:400px;line-height:400px;text-align:center;
+        background-color:#333;color:#fff;border:1px solid red;
+      }
+      .box1{display:flex;flex-direction:row;flex-wrap:nowrap;}
+      .box2{display:flex;flex-direction:row;flex-wrap:wrap;}
+      .box3{display:flex;flex-direction:row;flex-wrap:wrap-reverse;}
+    </style>
+  </head>
+  <body>
+    <!-- 修改class值，观察排列情况 -->
+    <div class="box1">
+      <div class="box">div1</div>
+      <div class="box">div2</div>
+      <div class="box">div3</div>
+      <div class="box">div4</div>
+    </div>
+  </body>
+</html>

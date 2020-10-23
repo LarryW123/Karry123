@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name></display-name>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/case/case533/error404.jsp</location>
+  </error-page>
+  <resource-ref>
+    <description>Connection Pool</description>
+    <res-ref-name>case641/conPool</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ex311</servlet-name>
+    <servlet-class>ex31.ex311</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ex312</servlet-name>
+    <servlet-class>ex31.ex312</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ex313</servlet-name>
+    <servlet-class>ex31.ex313</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ex321</servlet-name>
+    <servlet-class>ex32.ex321</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ex322</servlet-name>
+    <servlet-class>ex32.ex322</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ex323</servlet-name>
+    <servlet-class>ex32.ex323</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ex331</servlet-name>
+    <servlet-class>ex33.ex331</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>judge</servlet-name>
+    <servlet-class>ex34.judge</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>case512.hello</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>date</servlet-name>
+    <servlet-class>case512.date</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>change</servlet-name>
+    <servlet-class>case513.change</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>bmi</servlet-name>
+    <servlet-class>case513.bmi</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>check</servlet-name>
+    <servlet-class>case631.check</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>jdbc</servlet-name>
+    <servlet-class>case631.jdbc</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>st</servlet-name>
+    <servlet-class>case632.st</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>pst</servlet-name>
+    <servlet-class>case632.pst</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>cst</servlet-name>
+    <servlet-class>case632.cst</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>conPool</servlet-name>
+    <servlet-class>case641.conPool</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>display</servlet-name>
+    <servlet-class>case711.display</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>smartDownload</servlet-name>
+    <servlet-class>case721.smartDownload</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>fileUpload</servlet-name>
+    <servlet-class>case721.fileUpload</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>smartUpload</servlet-name>
+    <servlet-class>case721.smartUpload</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>conDemo</servlet-name>
+    <servlet-class>case731.conDemo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>conTable</servlet-name>
+    <servlet-class>case731.conTable</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StudentAction</servlet-name>
+    <servlet-class>case732.StudentAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>case741</servlet-name>
+    <servlet-class>case741.case741</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Get</servlet-name>
+    <servlet-class>case741.Action.Student.Get</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Insert</servlet-name>
+    <servlet-class>case741.Action.Student.Insert</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Delete</servlet-name>
+    <servlet-class>case741.Action.Student.Delete</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Update</servlet-name>
+    <servlet-class>case741.Action.Student.Update</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>userInsert</servlet-name>
+    <servlet-class>case742.com.userAction.Insert</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>userDelete</servlet-name>
+    <servlet-class>case742.com.userAction.Delete</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>userUpdate</servlet-name>
+    <servlet-class>case742.com.userAction.Update</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>userGet</servlet-name>
+    <servlet-class>case742.com.userAction.Get</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>userLogin</servlet-name>
+    <servlet-class>case742.com.userAction.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>userExit</servlet-name>
+    <servlet-class>case742.com.userAction.Exit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ex311</servlet-name>
+    <url-pattern>/ex31/ex311</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ex312</servlet-name>
+    <url-pattern>/ex31/ex312</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ex313</servlet-name>
+    <url-pattern>/ex31/ex313</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ex321</servlet-name>
+    <url-pattern>/ex32/ex321</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ex322</servlet-name>
+    <url-pattern>/ex32/ex322</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ex323</servlet-name>
+    <url-pattern>/ex32/ex323</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ex331</servlet-name>
+    <url-pattern>/ex33/ex331</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>judge</servlet-name>
+    <url-pattern>/ex34/judge</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/case512/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>date</servlet-name>
+    <url-pattern>/case512/date</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>change</servlet-name>
+    <url-pattern>/case513/change</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>bmi</servlet-name>
+    <url-pattern>/case513/bmi</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>check</servlet-name>
+    <url-pattern>/case631/check</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>jdbc</servlet-name>
+    <url-pattern>/case631/jdbc</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>st</servlet-name>
+    <url-pattern>/case632/st</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>pst</servlet-name>
+    <url-pattern>/case632/pst</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>cst</servlet-name>
+    <url-pattern>/case632/cst</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>conPool</servlet-name>
+    <url-pattern>/case641/conPool</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>display</servlet-name>
+    <url-pattern>/case711/display</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>smartDownload</servlet-name>
+    <url-pattern>/case721/smartDownload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>fileUpload</servlet-name>
+    <url-pattern>/case721/fileUpload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>smartUpload</servlet-name>
+    <url-pattern>/case721/smartUpload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>conDemo</servlet-name>
+    <url-pattern>/case731/conDemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>conTable</servlet-name>
+    <url-pattern>/case731/conTable</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentAction</servlet-name>
+    <url-pattern>/case732/StudentAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>case741</servlet-name>
+    <url-pattern>/servlet/case741</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Get</servlet-name>
+    <url-pattern>/StudentAction/Get</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Insert</servlet-name>
+    <url-pattern>/StudentAction/Insert</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Delete</servlet-name>
+    <url-pattern>/StudentAction/Delete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Update</servlet-name>
+    <url-pattern>/StudentAction/Update</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userInsert</servlet-name>
+    <url-pattern>/userAction/Insert</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userDelete</servlet-name>
+    <url-pattern>/userAction/Delete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userUpdate</servlet-name>
+    <url-pattern>/userAction/Update</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userGet</servlet-name>
+    <url-pattern>/userAction/Get</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userLogin</servlet-name>
+    <url-pattern>/userAction/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userExit</servlet-name>
+    <url-pattern>/userAction/Exit</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>toJSON</display-name>
+    <servlet-name>toJSON</servlet-name>
+    <servlet-class>case741.View.toJSON</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>toJSON</servlet-name>
+    <url-pattern>/toJSON</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>toLogin</display-name>
+    <servlet-name>toLogin</servlet-name>
+    <servlet-class>case741.View.toLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>toLogin</servlet-name>
+    <url-pattern>/toLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>checkUser</display-name>
+    <servlet-name>checkUser</servlet-name>
+    <servlet-class>case741.Action.Users.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>checkUser</servlet-name>
+    <url-pattern>/UsersAction/Login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Exit</display-name>
+    <servlet-name>Exit</servlet-name>
+    <servlet-class>case741.Action.Users.Exit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exit</servlet-name>
+    <url-pattern>/UsersAction/Exit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdatePwd</display-name>
+    <servlet-name>UpdatePwd</servlet-name>
+    <servlet-class>case741.Action.Users.UpdatePwd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdatePwd</servlet-name>
+    <url-pattern>/UsersAction/UpdatePwd</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ResetPwd</display-name>
+    <servlet-name>ResetPwd</servlet-name>
+    <servlet-class>case741.Action.Users.ResetPwd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResetPwd</servlet-name>
+    <url-pattern>/UsersAction/ResetPwd</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetRnd</display-name>
+    <servlet-name>GetRnd</servlet-name>
+    <servlet-class>case741.Action.Student.GetRnd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetRnd</servlet-name>
+    <url-pattern>/StudentAction/GetRnd</url-pattern>
+  </servlet-mapping>
+</web-app>

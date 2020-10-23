@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>正则表达式</title>
+    <style type="text/css">
+      .error_msg{visibility:visible;color:red}
+    </style>
+    <script type="text/javascript">
+      function userNameTest(){
+        var userName=document.getElementById("userName");
+        var reg=/^\w{6,20}$/;
+        var span = document.getElementById("txtError");
+        if(reg.test(userName.value)){
+          span.className = "";
+        }else{
+          span.className="error_msg";
+        }   	
+      }
+    </script>
+  </head>
+  <body>
+    <label>账号：</label>
+    <input type="text" id="userName" onblur="userNameTest()">
+    <span id="txtError" style="visibility: hidden;">账号只能是字母，数字，下划线</span>
+  </body>
+</html>

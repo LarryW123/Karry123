@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <pig>
+    <!-- 游戏模式,1:单猪; 2:双猪 -->
+    <mode>2</mode>
+    <!-- 是否播放背景音乐(1或者0) -->
+    <music>0</music>
+    <!-- 是否有声音效果(1或者0) -->
+    <sound>1</sound>
+    <!-- 玩家姓名 -->
+    <name>猪刚鬣</name>
+  </pig>
+</web-app>

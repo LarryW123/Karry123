@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>跳转语句</title>
+    <script type="text/JavaScript">
+	  //1、break终止循环：
+      document.write("break终止循环：");
+      for (var i=0;i<10;i++)
+      {
+      if (i==3)
+        {
+        break;
+        }
+      document.write(i + ",");
+      }
+      document.write("<br/><br/>");
+      
+      //2、continue本次循环
+      document.write("continue终止本次循环：");
+      for (var j=0;j<10;j++)
+      {
+      if (j==3)
+        {
+        continue;
+        }
+      document.write(j + ",");
+      }
+      document.write("<br/><br/>");
+      
+      //3、break终止其他语句块：
+      document.write("break终止list：");
+      cars=["Aston Martin","Bentley","Audi","Mercedes-Benz","BMW","Bugatti"];
+      list:
+      {
+      document.write(cars[0] + ",");
+      document.write(cars[1] + ",");
+      document.write(cars[2] + ",");
+      break list;
+      document.write(cars[3] + ",");
+      document.write(cars[4] + ",");
+      document.write(cars[5]);
+      }
+    </script>
+  </head>
+  
+  <body>
+
+  </body>
+</html>

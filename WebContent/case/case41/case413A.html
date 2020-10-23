@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery常用属性操作</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      function getProp(){
+		alert("文本框的value值："+$("#txtName").val());//获取文本框的value值
+		alert("标签的text值："+$("#lblName").text());//获取标签中的文本
+		alert("标签的html代码："+$("#lblName").html());//获取标签中的html代码
+      }
+      function setProp(){
+		$("#lblName").text("name：");//修改元素的text值
+		$("#txtName").val("张三");//修改元素的value值
+      }
+
+      function getAttr(){
+   	    alert("单选按钮A的name属性："+$("#rA").attr("name"));//获取元素属性
+   	    alert("单选按钮B的name属性："+$("#rB").attr("name"));
+   	    alert("单选按钮C的name属性："+$("#rC").attr("name"));
+   	    alert("单选按钮D的name属性："+$("#rD").attr("name"));
+      }
+      function addAttr(){
+		$("#rA").attr("name","group1");//添加元素属性
+		$("#rB").attr("name","group1");
+		$("#rC").attr("name","group1");
+		$("#rD").attr("name","group1");
+      }
+      function removeAttr(){
+		$("#rA").removeAttr("name");//删除元素属性
+		$("#rB").removeAttr("name");
+		$("#rC").removeAttr("name");
+		$("#rD").removeAttr("name");
+      }
+    </script>
+  </head>
+  <body>
+    <hr/>
+    <label id="lblName"><b>姓名：</b></label>
+    <input type="text" id="txtName" value="请输入姓名"/>
+    <br/><br/>
+    <input type="button" id="btnGetAttr" value="获取元素属性" onclick="getProp()"/>
+    <input type="button" id="btnSetAttr" value="设置元素属性" onclick="setProp()"/>
+    <br/><hr/>
+    
+    <input type="radio" id="rA" value="A"/>A
+    <input type="radio" id="rB" value="B"/>B
+    <input type="radio" id="rC" value="C"/>C
+    <input type="radio" id="rD" value="D"/>D
+    <br/><br/>
+    <input type="button" id="btnGetAttr" value="获取元素name属性" onclick="getAttr()"/>
+    <input type="button" id="btnAddAttr" value="添加元素name属性" onclick="addAttr()"/>
+    <input type="button" id="btnRemoveAttr" value="删除元素name属性" onclick="removeAttr()"/>
+    <br/><hr/>
+  </body>
+</html>

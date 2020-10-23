@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>get()方法</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">      
+      //读取json文件，解析返回值
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+          $.get(
+            "/Demo/case/case741/data/case741.json",
+            function(data){
+              $("#sp1").html(data.province + data.city);
+            }
+          );
+        });
+      });
+
+      /* 注意：以上案例中，我们访问的是一个JSON文件，所以，返回的data是一个JSON对象
+       * JSON对象是能够被JavaScript直接解析的，用data.province和data.city直接读取就可以了
+       * 如果返回的是一个JSON格式的字符串，就需要转换了：
+       * var obj = JSON.parse(data);
+       * alert(obj.province+obj.city);
+       */
+       $(document).ready(function(){
+         $("#btn2").click(function(){
+           $.get(
+             "/Demo/case/case741/data/case741.txt",
+             function(data){
+               $("#sp2").html(data);
+               var obj = JSON.parse(data);
+               alert(obj.province+obj.city);
+             }
+           );
+         });
+       });
+      
+    </script>
+  </head>
+  <body>
+    <button id="btn1" type="button">带回调函数的get()方法</button><br/><br/>
+    <span id="sp1" style="color:red"></span><br/>
+    <hr/>
+    <button id="btn2" type="button">带回调函数的get()方法</button><br/><br/>
+    <span id="sp2" style="color:red"></span>
+  </body>
+</html>

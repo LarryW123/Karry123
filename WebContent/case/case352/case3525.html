@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>修改节点属性</title>
+    <style type="text/css">
+      .c1{color:#006600}
+      .c2{color:#660000}
+    </style>
+    <script type="text/javascript">
+      function change(){
+        var userName=document.getElementById("userName");
+        userName.value="";
+        userName.style.color="#000000";//设置节点的style样式
+      }
+      function msg(){
+        var userName=document.getElementById("userName");
+        var msg=document.getElementById("msg");
+        if(userName.value=="admin"){
+        	msg.innerHTML="账号正确";//向节点中添加文本
+        	msg.className="c1";//设置节点的className属性
+        }
+        else{
+        	msg.innerHTML="账号错误";
+        	msg.className="c2";
+        }
+      }
+    </script>
+  </head>
+  <body>
+      <label>账号：</label>
+      <input id="userName" type="text" value="请输入账号" style="color:#cccccc" onfocus="change();" onblur="msg();"></input>
+      <span id="msg" class="c2"></span><br/><br/>
+      <label>密码：</label>
+      <input id="pw" type="password"></input>
+  </body>
+</html>

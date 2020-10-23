@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>发送验证码</title>
+    <script type="text/javascript">
+      var timer;
+      var time;
+      function cnt(){
+        var btn = document.getElementById("btn");
+  	  	btn.disabled = 1;
+        btn.value = "重新发送"+time;
+        time --;
+        if(time < 0){
+          btn.value="发送验证码";
+          window.clearInterval(timer);
+  		  btn.disabled = 0;
+        }
+      }
+      function begin(n){
+        time = n;
+        timer = window.setInterval("cnt()",1000);
+      }
+    </script>
+  </head>
+  <body>
+    <input id="btn" type="button" value="发送验证码" onclick="begin(5);"></input>
+  </body>
+</html>
+

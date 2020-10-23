@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>文件上传：Plupload多文件上传</title>
+    <link type="text/css" rel="stylesheet" href="Plupload/jquery-ui/jquery-ui.min.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="Plupload/js/jquery.ui.plupload/css/jquery.ui.plupload.css" media="screen" />
+    <style>
+  body{background:#fff;}
+  #uploader{max-width:800px;margin:50px auto;}
+    </style>
+  </head>
+  
+  <body>
+    <div id="uploader"></div>
+    
+    <script type="text/javascript" src="Plupload/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="Plupload/jquery-ui/jquery-ui.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="Plupload/js/plupload.full.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="Plupload/js/jquery.ui.plupload/jquery.ui.plupload.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="Plupload/js/i18n/zh_CN.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+      $(function() {
+        $("#uploader").plupload({//初始化上传器
+          runtimes:'html5,flash,silverlight,html4',//上传方式列表
+          url:'/Demo/case/case43/case431A2.html',//提交的目标地址
+          max_file_size:'10mb',//最大文件大小
+          max_file_count:40,//最大文件数量
+          chunk_size:'2mb',//分块上传时，每片的体积
+          resize:{//对要上传的图片进行压缩
+            width:800, 
+            height:600, 
+            quality:90,//压缩后图片的质量，只对jpg格式的图片有效，默认为90
+            crop:true,//允许裁剪图片
+            preserve_headers:false//不保留元数据
+          },
+          filters:[//过滤上传文件的类型
+            {title:"图片文件", extensions:"jpg,gif,png"},
+            {title:"压缩文件", extensions:"zip,rar"},
+            {title:"视频文件", extensions:"Avi,MP4"}
+          ],
+          rename:true,//允许重命名
+          sortable:true,//允许排序
+          dragdrop:true,//允许拖放文件到部件
+          views:{//视图设置
+            list:true,//允许列表视图
+            thumbs:true,//允许阅览视图
+            active:'thumbs'//默认阅览视图
+          },
+          flash_swf_url:'js/Moxie.swf',//Flash上传组件的url地址，当使用flash上传方式会用到该参数
+          silverlight_xap_url:'js/Moxie.xap'//Silverlight上传组件的url地址，当使用flash上传方式会用到该参数
+        });
+      });
+    </script>
+  </body>
+</html>

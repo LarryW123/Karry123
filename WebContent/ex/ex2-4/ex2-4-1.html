@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>String对象</title>
+    <script type="text/javascript">
+      function test(){
+        var before = "hAPPY,i'm a student,NOW";
+        var after = "";
+        for(var i=0; i<before.length; i++){
+          var ch = before.charAt(i);
+          var as = before.charCodeAt(i);
+          if(as>=65 && as<=90){
+          	after+=ch.toLowerCase();
+          }else if(as>=97 && as<=122){
+          	after+=ch.toUpperCase();
+          }else{
+          	after+=ch;
+          }
+        }
+        document.write("转换之前"+before+"<br>"+"转换之后"+after);
+      }
+    </script>
+  </head>
+  <body onload="test()">
+  </body>
+</html>

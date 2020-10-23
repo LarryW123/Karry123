@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Jcrop用法</title>
+    <link href="Jcrop/css/basic.css" rel="stylesheet" type="text/css" />
+    <link href="Jcrop/css/jquery.Jcrop.css" rel="stylesheet" type="text/css"/>
+    
+    <script type="text/javascript" src="Jcrop/js/jQuery.js"></script>
+    <script type="text/javascript" src="Jcrop/js/jquery.Jcrop.js"></script>
+    <script type="text/javascript" src="Jcrop/js/basic.js"></script>
+    
+    <script type="text/javascript">
+      var jcropImg;
+      $(document).ready(function(){
+        $('#img').Jcrop(//初始化Jcrop插件
+          {aspectRatio:1/1},//设置选框的宽高比，1/1即正方形
+          function(){jcropImg = this;}//初始化后回调函数
+        );
+      });
+      $(document).ready(function(){
+        $('#btn').click(function(){
+          var imgW = jcropImg.getBounds()[0];//获取图片实际显示的大小(宽)
+          var imgH = jcropImg.getBounds()[1];//获取图片实际显示的大小(高)
+          alert("图片大小:"+imgW+"*"+imgH);
+          var x = jcropImg.tellSelect().x;//选框的实际尺寸
+          var y = jcropImg.tellSelect().y;//选框的实际尺寸
+          alert("选框坐标:"+x+","+y);
+          var w = jcropImg.tellSelect().w;//选框的实际尺寸
+          var h = jcropImg.tellSelect().h;//选框的实际尺寸
+          alert("选框尺寸:"+w+","+h);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img id="img" src="Jcrop/img/demo.jpg">
+    <input id="btn" type="button" value="确定"/>
+  </body>
+</html>

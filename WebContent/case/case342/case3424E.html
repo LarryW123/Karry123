@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>图形验证码</title>
+    <style type="text/css">
+      div{width:40px;height:40px;float:left;margin:0px;padding:0px}
+    </style>
+  </head>
+  
+  <body onload="rndSort()">
+    <div id="d0"></div>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3" style="clear:left"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+  </body>
+  
+  <script type="text/javascript">
+    function randomSort(a,b){
+      return Math.random()>0.5?-1:1;
+    }
+    var arrImg = new Array();//原始数组
+    arrImg[0]='{"img":"images/t1.png","value":0}';
+    arrImg[1]='{"img":"images/j1.png","value":1}';
+    arrImg[2]='{"img":"images/j2.png","value":1}';
+    arrImg[3]='{"img":"images/j3.png","value":1}';
+    arrImg[4]='{"img":"images/j4.png","value":1}';
+    arrImg[5]='{"img":"images/j5.png","value":1}';
+    var arrVal = new Array(); //用于存放随机排序的数组 
+    function rndSort(){//随机排序
+      arrVal = arrImg.sort(randomSort);  
+      for(var i=0;i<=5;i++){
+    	 var obj = document.getElementById("d"+i);
+    	 obj.innerHTML="<img src='"+JSON.parse(arrVal[i]).img+"' onclick='checkCode("+JSON.parse(arrVal[i]).value+")'/>";
+      }
+    }
+    function checkCode(val){
+      if(val!=0){
+    	alert("错误");
+    	rndSort();
+      }else{
+    	alert("正确");
+      }
+    }
+  </script>
+</html>

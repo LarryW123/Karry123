@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>throw手动抛出异常</title>
+    <script type="text/javascript">  
+      function test(){
+      	try{
+      		var i=10;
+      		var j=0;
+      		var k=i/j;
+      		alert(k);
+      		throw "除数不能为0";
+      	} 
+		catch(e){
+			alert(e);
+		}
+      }
+    </script>
+  </head>
+  
+  <body>
+    <input type="button" value="错误测试" onclick="test();"/>
+  </body>
+</html>

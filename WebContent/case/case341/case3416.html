@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Math属性</title>
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript">
+      //圆周率示例
+      var r=parseFloat(window.prompt("请输入半径r:",2.4));
+      var c=2*Math.PI*r;
+      alert("该圆的周长:"+c);
+      var s=Math.PI*r*r;
+      alert("该圆的面积:"+s);
+      var v=4*Math.PI*r*r*r/3;
+      alert("该球的体积:"+v);
+      //自然对数示例
+      document.write("自然对数e=:"+Math.E);
+      document.write("<br/>");
+      var x = 999;
+      document.write("x="+x+"时e的近似值："+Math.pow(1+(1/x),x));
+    </script>
+  </head>
+  
+  <body>
+
+  </body>
+</html>

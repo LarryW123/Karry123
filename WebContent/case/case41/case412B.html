@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>淡入/淡出特效</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      //淡入
+      $(document).ready(function(){
+        $("#fadeIn").click(function(){
+          $("#div").fadeIn("slow");
+        });
+      })
+      //淡出
+      $(document).ready(function(){
+        $("#fadeOut").click(function(){
+          $("#div").fadeOut("slow");
+        });
+      })
+      //切换
+      $(document).ready(function(){
+        $("#fadeToggle").click(function(){
+          $("#div").fadeToggle();
+        })
+      })
+      //渐变
+      $(document).ready(function(){
+        $("#fadeTo").click(function(){
+          $("#div").fadeTo("slow",0.5);
+        })
+      })
+    </script>
+    <style type="text/css">
+      #div{
+        text-align:center;width:200px;
+        height:200px;line-height:200px;
+        background-color:red;color:white;
+        margin:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" id="fadeIn" value="淡入"/>
+    <input type="button" id="fadeOut" value="淡出"/>
+    <input type="button" id="fadeToggle" value="切换"/>
+    <input type="button" id="fadeTo" value="渐变"/>
+    <div id="div">淡入/淡出特效</div>
+  </body>
+</html>

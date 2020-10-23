@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>提交表单</title>
+  </head>
+  <body>
+    <!-- form中的控件传值：name=value -->
+    <!-- 标签的for属性，点击标签也可选定指定ID的控件 -->
+    <form action="#" method="get">
+      <!-- 文本框-->
+      <label for="user">账号：</label>
+      <input type="text" id="user" name="user"/>
+      <br/><br/>
+      
+      <!-- 只读文本框-->
+      <label for="nickname">昵称：</label>
+      <input type="text" id="nickname" name="nickname" value="geekCN" readonly="readonly"/>
+      <br/><br/>
+      
+      <!-- 不可用文本框-->
+      <label for="QQ">Q Q：</label>
+      <input type="text" id="QQ" name="QQ" value="123456" disabled="disabled"/>
+      <br/><br/>
+      
+      <!-- 密码框-->
+      <label for="password">密码：</label>
+      <input type="password" id="password" name="password"/>
+      <br/><br/>
+      
+      <!-- 日期框:date|time|datetime-local|month|week-->
+      <label for="date">日期选择器：</label>
+      <input type="date" id="date" name="date"/>
+      <input type="time" id="time" name="time"/>
+      <input type="datetime-local" id="datetime-local" name="datetime-local"/>
+      <input type="month" id="month" name="month"/>
+      <input type="week" id="week" name="week"/>
+      <br/><br/>
+      
+      <!-- 数字框-->
+      <label for="number">数字：</label>
+      <input type="number" id="number" name="number"/>
+      <br/><br/>
+      
+      <!-- 微调框-->
+      <label for="range">微调：</label>
+      <input type="range" id="range" name="range" min="0" max="10"/>
+      <br/><br/>
+      
+      <!-- 调色板-->
+      <label for="rgb">调色：</label>
+      <input type="color" id="rgb" name="rgb"/>
+      <br/><br/>
+      
+      <!-- 电话：移动设备响应，自动切换输入法面板，目前只有 Safari支持-->
+      <label for="tel">电话：</label>
+      <input type="tel" id="tel" name="tel"/>
+      <br/><br/>
+      
+      <!-- 邮箱：在提交表单时，会自动验证 email域的值-->
+      <label for="email">邮箱：</label>
+      <input type="email" id="email" name="email"/>
+      <br/><br/>
+      
+      <!-- 网址：提交表单时，会自动验证 url域的值-->
+      <label for="url">网址：</label>
+      <input type="url" id="url" name="url"/>
+      <br/><br/>
+      
+      <!-- 搜索框：在移动设备响应，软键盘中按search进行搜索-->
+      <label for="search">搜索：</label>
+      <input type="search" id="search" name="search"/>
+      <br/><br/>
+      
+      <!-- 隐藏域-->
+      <input type="hidden" id="hd" name="hd" value="我是永远不会被你看到的，但不代表我不存在"> 
+      
+      <!-- 单选框：name属性用于分组；hecked属性用于设置默认值 -->
+      <label>第1题：</label>
+      <input type="radio" name="no1" id="a1" value="a1" checked="checked"/>A 
+      <input type="radio" name="no1" id="a2" value="a2" />B 
+      <input type="radio" name="no1" id="a3" value="a3" />C 
+      <input type="radio" name="no1" id="a4" value="a4" />D 
+      <br/><br/>
+      <label>第2题：</label>
+      <input type="radio" name="no2" value="b1" />A 
+      <input type="radio" name="no2" value="b2" />B 
+      <input type="radio" name="no2" value="b3" />C 
+      <input type="radio" name="no2" value="b4" />D 
+      <br/><br/>
+
+      <!-- 复选框：checked属性用于设置默认勾选项，下面是不规范书写方式，建议用上面radio中的 -->
+      <label>爱好：</label>
+      <input type="checkbox" name="favorites" value="f1" checked/>运动 
+      <input type="checkbox" name="favorites" value="f2" />书画 
+      <input type="checkbox" name="favorites" value="f3" />阅读
+      <br/><br/>
+
+      <!-- 下拉列表框 ：selected属性用于设置默认选中项-->
+      <label>学院(单选):</label>
+      <select id="college" name="college">  
+        <option value="c1">信息科学与技术学院</option> 
+        <option value="c2" selected="selected">外国语学院</option>
+        <option value="c3">电子商务学院</option> 
+        <option value="c4">国际交流学院</option> 
+      </select>
+      <br/><br/>
+      
+      <!--滚动列表框：multiple属性用于控制多选 -->
+      <label>课程(按CTRL多选):</label>
+      <select id="course" name="course" size="4" multiple="multiple" >
+        <option value="c1">HTML+CSS</option>
+        <option value="c2">JavaScript+JSON</option>
+        <option value="c3">JQuery+AJAX</option>
+        <option value="c4">Servlet+JSP</option>
+        <option value="c5">JDBC</option>
+        <option value="c6">JavaBean</option>
+        <option value="c7">DAO+MVC</option>
+      </select>
+      <br/><br/>
+      
+      <!-- 图像域 -->
+      <label for="image">图像按钮：</label>
+      <input type="image" id="image" name="image" src="img.jpg" onclick="alert('Hello')" style="width:100px;height:100px">
+      <br/><br/>
+      
+      <!-- 文件域 -->
+      <label for="file">文件上传：</label>
+      <input type="file" id="file" name="file">
+      <br/><br/>
+      
+      <!-- 文本域 (多行文本框)-->
+      <label for="textarea">多行文本：</label>
+      <textarea id="textarea" name="textarea" rows="8" cols="30">这家伙很懒，什么都没有留下</textarea>
+      <br/><br/>
+      
+      <!-- 各类按钮 -->
+      <input type="submit" value="提交">
+      <input type="reset" value="重置">
+      <input type="button" value="取消" onclick="alert('点我执行自定义脚本')"> 
+    </form>
+  </body>
+</html>

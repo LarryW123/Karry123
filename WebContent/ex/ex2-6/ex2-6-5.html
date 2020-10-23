@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BootStrap首页设计</title>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+  <script type="text/javascript" src="easyui/jquery.min.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+	  $('.carousel').carousel({
+	    interval:3000
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- 页面logo -->
+    <div class="row">
+      <div class="col-md-4">
+        <img src="img/logo.png"></img>
+      </div>
+      <div class="col-md-4">
+        <img src="img/navigate/header.jpg"></img>
+      </div>
+      <div class="col-md-4" style="padding:20px;font-size:12px;text-align:right">
+        <a href="login.html">登录</a>
+        <a href="regist.html">注册</a>
+      </div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-inverse">
+      <a class="navbar-brand" href="#">首页</a>
+      <a class="navbar-brand" href="#">家电</a>
+      <a class="navbar-brand" href="#">零食</a>
+      <a class="navbar-brand" href="#">水果</a>
+      <a class="navbar-brand" href="#">玩具</a>
+      <a class="navbar-brand" href="#">衣帽</a>
+      <a class="navbar-brand" href="#">鞋袜</a>
+      <a class="navbar-brand" href="#">旅游</a>
+      <form class="navbar-form navbar-right">
+        <div class="form-group" style="padding-right:10px">
+          <input type="text" class="form-control" placeholder="请输入商品名称">
+          <button type="submit" class="btn btn-default">搜索商品</button>
+        </div>
+      </form>
+    </nav>
+    
+    <!-- 轮播图 -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- 游标点 -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      </ol>
+      
+      <!-- 轮播图片 -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" align="center"><img src="img/carousel/1.jpg" alt="..."></div>
+        <div class="item" align="center"><img src="img/carousel/2.jpg" alt="..."></div>
+        <div class="item" align="center"><img src="img/carousel/3.jpg" alt="..."></div>
+        <div class="item" align="center"><img src="img/carousel/4.jpg" alt="..."></div>
+      </div>
+      <!-- 控制按钮 -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+    
+    <!-- 热门商品展示 -->
+    <div>
+      <span style="font-family:微软雅黑;font-size:24px;color:#696969;margin-right:24px;">热门商品</span>
+      <span style="font-family:幼圆;font-size:16px;color:#8F8F8F">您的追求就是我们的宗旨</span>
+    </div>
+
+    <!--商品图片-->
+    <div class="col-md-2 hidden-sm hidden-xs" style="padding-left:0px;"><img src="img/goods/goods_left.jpg" height="420"/></div>
+    <div class="col-md-10">
+      <div class="col-md-6 hidden-sm  hidden-xs" ><img src="img/goods/goods_big.jpg" /></div>
+      <div class="col-md-2 col-sm-4 col-xs-6" style="height:240px;text-align:center;"><img src="img/goods/goods01.jpg" /><h5>榨汁机</h5>￥268</div>
+      <div class="col-md-2 col-sm-4 col-xs-6" style="height:240px;text-align:center;"><img src="img/goods/goods02.jpg" /><h5>液晶屏</h5>￥988</div>
+      <div class="col-md-2 col-sm-4 col-xs-6" style="height:240px;text-align:center;"><img src="img/goods/goods03.jpg" /><h5>电炒锅</h5>￥666</div>
+      <div class="col-md-2 col-sm-4 col-xs-6" style="height:240px;text-align:center;"><img src="img/goods/goods04.jpg" /><h5>豆浆机</h5>￥536</div>
+      <div class="col-md-2 col-sm-4 col-xs-6" style="height:240px;text-align:center;"><img src="img/goods/goods05.jpg" /><h5>咖啡机</h5>￥468</div>
+      <div class="col-md-2 col-sm-4 col-xs-6" style="height:240px;text-align:center;"><img src="img/goods/goods06.jpg" /><h5>洗衣机</h5>￥3968</div>
+      <div class="col-md-2 col-sm-4 col-xs-6" style="height:240px;text-align:center;"><img src="img/goods/goods07.jpg" /><h5>扫地机器人</h5>￥1998</div>
+      <div class="col-md-2 col-sm-4 col-xs-6" style="height:240px;text-align:center;"><img src="img/goods/goods08.jpg" /><h5>电饭煲</h5>￥228</div>
+      <div class="col-md-2 col-sm-4 col-xs-6" style="height:240px;text-align:center;"><img src="img/goods/goods09.jpg" /><h5>微波炉</h5>￥196</div>
+    </div>
+    
+    <!--广告-->
+    <div><img src="img/navigate/footer.jpg" width="100%"/>
+    
+    <!--友情链接-->
+    <div align="center" style="font-size:12px">
+      <a href="javascript:viod(0)">关于我们</a>|
+      <a href="javascript:viod(0)">联系我们</a>|
+      <a href="javascript:viod(0)">招贤纳士</a>|
+      <a href="javascript:viod(0)">法律声明</a>|
+      <a href="javascript:viod(0)">友情链接</a>|
+      <a href="javascript:viod(0)">支付方式</a>|
+      <a href="javascript:viod(0)">配送方式</a>|
+      <a href="javascript:viod(0)">服务声明</a>|
+      <a href="javascript:viod(0)">广告声明</a>
+      <br/>Copyright &copy; 2000-2010 佳码商城 版权所有
+    </div>
+    
+  </div>
+</body>
+</html>

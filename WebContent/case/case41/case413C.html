@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery常用元素操作</title>
+    <style type="text/css">
+      .topDiv{
+        border:solid 1px red;margin:10px;
+        min-height:100px;
+        width:300px;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      var i=1;
+      function append(){
+  		$("#div1").append("<div>我是插入到后面的内部元素"+i+"</div>");//指定元素的内部后面添加元素
+        i++;
+      }
+      function prepend(){
+  		$("#div1").prepend("<div>我是插入到前面的外部元素"+i+"</div>");//指定元素的内部前面添加元素
+        i++;
+      }
+      function after(){
+  		$("#div1").after("<div>我是插入到后面的内部元素"+i+"</div>");//指定元素的外部后面添加元素
+        i++;
+      }
+      function before(){
+  		$("#div1").before("<div>我是插入到前面的外部元素"+i+"</div>");//指定元素的外部前面添加元素
+        i++;
+      }
+      function remove(){
+        $("#div1").remove();//删除指定元素
+      }
+    </script>
+  </head>
+  <body>
+    <div id="div1" class="topDiv">这里有一个DIV</div>
+    <input type="button" id="btnAppend" value="内后添加元素" onclick="append()"/>
+    <input type="button" id="btnPrepend" value="内前添加元素" onclick="prepend()"/>
+    <input type="button" id="btnAfter" value="外后添加元素" onclick="after()"/>
+    <input type="button" id="btnBefore" value="外前添加元素" onclick="before()"/>
+    <input type="button" id="btnRemove" value="移除元素" onclick="remove()"/>
+  </body>
+</html>

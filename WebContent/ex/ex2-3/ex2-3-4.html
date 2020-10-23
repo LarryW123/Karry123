@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>嵌套：判断天数</title>
+    <script type="text/javascript">
+		var numYear=parseInt(window.prompt("请输入年份："));
+		var numMonth=parseInt(window.prompt("请输入月份："));
+		var numDay;
+		switch (numMonth) {
+          case 1:
+          case 3:
+          case 5:
+          case 7:
+          case 8:
+          case 10:
+          case 12:
+          	numDay = 31;
+          	break;
+          case 4:
+          case 6:
+          case 9:
+          case 11:
+          	numDay = 30;
+          	break;
+          case 2:
+            if ((numYear%4==0) && (numYear%100!=0)||(numYear%400==0))
+                numDay = 29;
+            else
+                numDay = 28;
+            break;
+          default:
+          	numDay="错误的月份！";
+          	break;
+      	}
+      	document.write(numDay);
+    </script>
+  </head>
+  <body>
+  
+  </body>
+</html>

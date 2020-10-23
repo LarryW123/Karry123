@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>跳转语句</title>
+    <script type="text/JavaScript">
+      var rows=parseInt(prompt("请输入行数:"));
+      var cols=parseInt(prompt("请输入列数:"));
+      document.write("<table width='100%' border='1px'>");
+      document.write("<caption>成绩表</caption>");
+      for(var row=0;row<rows;row++){
+        if(row%2==0){
+		  document.write("<tr bgcolor='#cccccc>'");}
+        else{
+		  document.write("<tr>");}
+        for(var col=0; col<cols; col++){
+		  document.write("<td height="20px"></td>");}
+ 		  document.write("</td>");
+      }
+      document.write("</table>");
+    </script>
+  </head>
+  
+  <body>
+
+  </body>
+</html>

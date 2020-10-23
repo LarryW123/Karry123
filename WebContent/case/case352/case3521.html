@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>document常见属性</title>
+    <script type="text/javascript">
+      function changDomAttr(){
+        document.title="document属性示例";//文档标题
+        document.alinkColor="#f00";//正在访问链接色
+        document.linkColor="#0f0";//未访问链接色
+        document.vlinkColor="#ff0";//已访问链接色
+        document.bgColor="#000";//文档背景色
+        document.fgColor="#fff";//文档前景色
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="change" onclick="changDomAttr();">
+    <a href="http://www.jju.edu.cn" target="_blank">超链接</a>
+    <p>普通文字</p>
+  </body>
+</html>
+

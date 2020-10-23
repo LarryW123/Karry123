@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>QQ号码验证</title>
+    <script type="text/javascript">
+      function checkQQ(qq) {
+        var reg = /^[0-9]*$/;
+        var isRight = reg.test(qq);
+        if (!isRight){
+          alert("QQ号码只能是纯数字！"); 
+        }
+      }
+    </script>
+</head>
+<body>
+  <label>QQ:</label>
+  <input type="text" onblur="checkQQ(this.value);" />
+</body>	
+</html>
+

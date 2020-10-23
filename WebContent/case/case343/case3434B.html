@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>屏蔽敏感字</title>
+    <script type="text/javascript">
+      var str="mmp tom!mdzz jerry!";
+      var reg=new RegExp(/(mmp|mdzz)/,"g");
+      var s=str.replace(reg,"Hello");
+      document.write(s); 
+    </script>
+  </head>
+  <body>
+  
+  </body>	
+</html>
+
+
+

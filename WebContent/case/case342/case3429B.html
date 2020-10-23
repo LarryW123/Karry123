@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Object对象</title>
+    <script type="text/javascript">
+      //使用Object类创建对象p
+      var p = new Object();//1、实例化，此时obj为空对象，没有任何属性和方法
+      
+      p.name = "tom";//2、为对象增加属性
+      alert(p.name);
+      
+      p.age = 16;//2、继续为对象增加属性
+      alert(p.age);
+      
+      p.sayHi = function(){//3、为对象增加方法
+      	alert("Hello Jerry");
+      };
+      
+      p.sayHi();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+

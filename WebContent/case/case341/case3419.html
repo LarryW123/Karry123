@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>系统日期时间</title>
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/JavaScript">
+      var now=new Date();
+      var yy=now.getFullYear();//或var yy=now.getYear()+1900;
+      var mm=now.getMonth()+1;
+      var dd=now.getDate();
+      var d=now.getDay();
+      var h=now.getHours();
+      var m=now.getMinutes();
+      var s=now.getSeconds();
+      document.write("现在是："+yy+"年"+mm+"月"+dd+"日("+"星期"+d+")"+h+"时"+m+"分"+s+"秒");
+    </script>
+  </head>
+  
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>load()方法</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      /*
+       * 简单load()方法：读取文本文件，直接返回内容
+       * 注意：这里的url不能写相对本html文件的相对路径，而要写相对于项目根目录的相对路径
+       * 即不能写"data/case741.jsp",而要写"/Demo/case/case741/data/case741.jsp"
+       * 因为第一次请求提交到了后台以后，第二次再发请求，则是从后台开始了
+       * 所以，原则上，所有实例都需要这样写，大家可以试一试，比较一下改和不改的异同
+       * -- 前端的访问路径写相对本文件的相对路径就可以了；
+       * -- 后台的访问路径必须要写相对于项目根目录的相对路径
+       * 为避免出错，我们都记住以下规则就不容易错了：
+       * -- 前端路径从“端口号”后面开始写
+       * -- 后台路径从“项目名称”后面开始写
+       */
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+          $("#sp1").load("/Demo/case/case741/data/case741.txt");
+        });
+      });
+      
+      /* 带回调函数的复杂load()方法：读取json文件，解析返回值
+       * txt：调用成功时的结果内容
+       * msg：调用的状态，成功"success"，失败"error"
+       * xhr： XMLHttpRequest对象，xhr.status可获取状态key值,xhr.statusText可获取状态value值
+       */
+      $(document).ready(function(){
+        $("#btn2").click(function(){
+          $("#sp2").load(
+            "/Demo/case/case741/data/case741.json",
+        	function(txt,msg,xhr){
+        	  if(msg == "success"){
+        		var obj = JSON.parse(txt);
+        	    alert(obj.province+obj.city);
+        	  }
+        	  else if(msg=="error"){
+        		alert(xhr.status+": "+xhr.statusText);
+        	  }
+            });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn1" type="button">简单load()方法获取数据</button><br/><br/>
+    <span id="sp1" style="color:red"></span>
+    <hr/>
+    <button id="btn2" type="button">带回调函数的load()方法</button><br/><br/>
+    <span id="sp2" style="color:red"></span>
+  </body>
+</html>

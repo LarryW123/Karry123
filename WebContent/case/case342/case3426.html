@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>函数返回值</title>
+    <script type="text/javascript">
+      function calculate(){
+        var exp=document.getElementById("input").value;
+        var result = eval(exp);    	
+        alert(exp+"="+result);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="input"/>
+    <input type="button" value="计算" onclick="calculate();">
+  </body>
+</html>
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>closure用法</title>
+    <script type="text/javascript">
+      var iBaseNum = 10; 
+      function addNum(iNum1,iNum2) { 
+        function doAdd() { 
+          return iNum1 + iNum2 + iBaseNum; 
+        } 
+        alert(doAdd());
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="closure测试" onclick="addNum(5,8)">
+  </body>
+</html>
+

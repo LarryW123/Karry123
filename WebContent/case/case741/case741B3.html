@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>post()方法</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      /* 读取JSP|servlet的处理结果
+       * 此案例中，我们直接拼接参数提交给后台
+       */
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+      	  var userName = $("#userName").val();
+    	  var password = $("#password").val();
+          $.post(
+            "/Demo/case/case741/data/case741.jsp",
+            {"userName":userName,"password":password},
+            function(data){
+              $("#sp1")[0].innerHTML = data;
+            });
+          });
+        });
+      /* 读取JSP|servlet的处理结果
+       * 此案例中，我们进行表单序列化，再讲序列化后的数据提交给后台
+       * 表单序列化常用的方法有两种：
+       * $("#fm").serialize()：将表单数据序列化为字符串
+       * $("#fm").serializeArray()：将表单数据序列化为JSON对象
+       */
+      $(document).ready(function(){
+        $("#btn2").click(function(){
+      	  //var s = $("#fm").serialize();
+      	  //alert(s)
+      	  var sArr = $("#fm").serializeArray();
+           $.post(
+            "/Demo/case/case741/data/case741.jsp",
+            sArr,
+            function(data){
+              $("#sp2")[0].innerHTML = data;
+            });
+          }); 
+        });
+    </script>
+  </head>
+  <body>
+    <label>账号：</label><input type="text" id="userName"/><br/><br/>
+    <label>密码：</label><input type="text" id="password"/><br/><br/>
+    <button id="btn1" type="button">直接拼接参数提交</button><br/><br/>
+    <span id="sp1" style="color:red"></span><br/><hr/>
+    
+    <form id="fm">
+      <label>账号：</label><input type="text" name="userName"/><br/><br/>
+      <label>密码：</label><input type="text" name="password"/><br/><br/>
+      <button id="btn2" type="button">表单序列化后提交</button><br/><br/>
+    </form>
+    <span id="sp2" style="color:red"></span><br/><hr/>
+  </body>
+</html>

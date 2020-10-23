@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>RegExp方法</title>
+    <script type="text/javascript">
+      var str="I am a student";
+      var reg=new RegExp("e");
+      document.write(reg.test(str)+"<br/>"); //字符串中存在e，返回true
+      document.write(reg.exec(str)+"<br/>"); //字符串中存在e，返回e
+      reg.compile("f");//修改了验证方式
+      document.write(reg.test(str)+"<br/>");  //字符串中不存在f，返回false
+      document.write(reg.exec(str)+"<br/>"); //字符串中存在e，返回e
+    </script>
+  </head>
+  <body>
+  
+  </body>	
+</html>
+

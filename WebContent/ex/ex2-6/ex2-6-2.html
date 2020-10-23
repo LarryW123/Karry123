@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery禁用按键</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){//禁用F5键
+        $(document).bind("keydown",function(e){ 
+          if(e.keyCode==116){
+            e.keyCode = 0;
+            alert("禁用F5键刷新网页!");
+            return false; 
+          }
+        }); 
+      });
+    </script>
+  </head>
+  <body>
+    <label>此页面禁用F5刷新</label>
+  </body>
+</html>

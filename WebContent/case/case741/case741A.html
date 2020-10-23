@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>AJAX技术</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#btn").click(function(){
+          $.ajax({
+        	url:"data/case741.txt",//最好写成"/Demo/case/case741/data/case741.txt"
+        	type:"post",
+        	dataType:"text",
+        	success:function(data){
+          	  var msg=data;
+          	  //var msg = data.replace(/\r\n/g,"<br/>");
+          	  $("#sp")[0].innerHTML = msg;
+          	}
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <label>使用AJAX技术获取数据，页面的内容不会丢失</label><br/><br/>
+    <label>输入文本，再点击按钮试试</label>
+    <input type="text"/><br/><br/>
+    <button id="btn" type="button">AJAX获取数据</button><br/><br/>
+    <span id="sp" style="color:red"></span>
+  </body>
+</html>

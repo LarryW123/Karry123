@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>数组</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>  
+    <input type="text" id="txtNumbers" value="12,4,3,123,51"/>
+    <input type="button" value="数组倒转" onclick="s1();"/>
+    <input type="button" value="数组排序(文本)" onclick="s2();"/>
+    <input type="button" value="数组排序(数值)" onclick="s3();"/>
+  </body>
+  <script type="text/JavaScript">
+    function sortFunc(a,b){
+     return a-b;
+    }
+    var array = document.getElementById("txtNumbers").value.split(",");
+    function s1(){
+     array.reverse();
+     alert(array.toString());
+    }
+    function s2(){
+     array.sort();
+     alert(array.toString());
+    }
+    function s3(){
+     array.sort(sortFunc);
+     alert(array.toString());
+    }
+  </script>
+</html>

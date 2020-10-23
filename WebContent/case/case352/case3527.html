@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>修改节点属性</title>
+    <script type="text/javascript">
+      function add(){
+        var obj=document.createElement("input");
+        obj.setAttribute("type","text");
+        obj.setAttribute("value","单击清空，双击移除");
+        obj.setAttribute("onclick","blank(this)");
+        obj.setAttribute("ondblclick","del(this)");
+        //1、以上代码创建了一个文本框：
+        //<input type="text" value="单击清空，双击移除" onclick="clear(this)" ondblclick="del(this)"/>
+        //2、再将s节点插入到d1节点中的最后一个节点位置
+        document.getElementById("d1").appendChild(obj);
+        //3、以下代码为排版需要，增加了一个换行，可以不写
+        obj=document.createElement("br");
+        document.getElementById("d1").appendChild(obj);
+      }
+      function blank(obj){
+        obj.value="";
+      }
+      function del(obj){
+        obj.parentNode.removeChild(obj);
+        cleanWhitespace(document.getElementById("d1"));
+      }
+      function cleanWhitespace(oEelement){
+        for(var i=0;i<oEelement.childNodes.length;i++){
+          var node=oEelement.childNodes[i];
+          if(node.nodeType==3 && !/\S/.test(node.nodeValue)){
+          	node.parentNode.removeChild(node);
+      	  }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="添加节点" onclick="add();"></input>
+    <div id="d1">test1<br/></div>
+    <div id="d2">test2</div>
+  </body>
+</html>

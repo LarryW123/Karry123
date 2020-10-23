@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>BootStrap会员注册</title>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <!--BootStrap设计的页面支持响应式的 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--Bootstrap核心CSS文件-->
+  <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+  <!--引入JQuery的JS文件：一定要在BootStrap的JS的文件的前面引入-->
+  <script type="text/javascript" src="easyui/jquery.min.js"></script>
+  <!--Bootstrap核心JavaScript文件-->
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <!--自定义CSS文件-->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="topDiv-regist">
+    <img src="img/login.png" style="width:60px;height:60px"/>新用户注册 | User Regist<hr/>
+    <form class="form-inline">
+      <div class="textDiv"  style="text-align:left">
+        <label for="userName">手&nbsp;机&nbsp;号：</label>
+        <input type="text" class="form-control input-sm" id="userName" style="width:200px;height:24px" placeholder="11位数字"/>
+      </div>
+      <div class="textDiv"  style="text-align:left">
+        <label for="pw">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+        <input type="password" class="form-control input-sm" id="password" style="width:200px;height:24px"/>
+      </div>
+      <div class="textDiv"  style="text-align:left">
+        <label for="rePassword">确认密码：</label>
+        <input type="password" class="form-control input-sm" id="rePassword" style="width:200px;height:24px"/>
+      </div>
+      <div class="textDiv"  style="text-align:left">
+        <label for="email">电子邮箱：</label>
+        <input type="email" class="form-control input-sm" id="email" style="width:200px;height:24px" placeholder="userName@mail.com"/>
+      </div>
+      <div class="textDiv" style="text-align:left">
+        <div class="radio">性&nbsp;&nbsp;&nbsp;&nbsp;别：
+          <label><input type="radio" name="sex" value="male" checked>男</label>
+          <label><input type="radio" name="sex" value="female">女</label>
+        </div>
+      </div>
+      <div class="textDiv" style="text-align:left">
+        <div class="checkbox">爱&nbsp;&nbsp;&nbsp;&nbsp;好：
+          <label><input type="checkbox" name="hobby" value="arts">美术</label>
+          <label><input type="checkbox" name="hobby" value="music">音乐</label>
+          <label><input type="checkbox" name="hobby" value="sports">体育</label>
+        </div>
+      </div>
+      <div class="textDiv" style="text-align:left">
+        <textarea class="form-control" rows="3" style="width:300px" placeholder="个人简介"></textarea>
+      </div>
+      <div style="text-align:center">
+        <button type="submit" class="btn btn-info btn-xs" style="width:80px;height:24px">注册</button>
+        <button type="submit" class="btn btn-info btn-xs" style="width:80px;height:24px">重置</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

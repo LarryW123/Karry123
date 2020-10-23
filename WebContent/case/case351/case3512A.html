@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容 -->
+    <meta name="renderer" content="webkit"><!-- 国产浏览器高速模式 -->
+    <title>event</title>
+      <script type="text/javascript">
+        function promptMsg(){
+          var str = window.prompt("打开新页面:","case3512B.html");
+          if(str != null){
+            window.open(str);
+          }
+        }
+        //如果窗口是不是用window.open()打开的
+        //那么在有些浏览器中window.close()是不起作用的
+        function closeMe(){
+          var s = window.confirm("确定要关闭本页？");
+          if(s == true){
+            window.close();
+          }
+        }
+        function openDialog(){
+          window.showModalDialog("case3512B.html",window,"dialogWidth:800px,dialogHeight:600px");
+        }
+      </script>
+  </head>
+  <body>
+    <input type="button" value="弹出输入框" onclick="promptMsg()">
+    <input type="button" value="关闭" onclick="closeMe()">
+    <input type="button" value="打开新窗口" onclick="openDialog()">
+  </body>
+</html>
+

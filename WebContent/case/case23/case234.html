@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>背景颜色与背景图片</title>
+    <style type="text/css">
+      body{
+        background-image:url("images/image4.jpg");
+      }
+      div{
+        width:200px;
+        height:200px;
+        line-height:200px;
+        text-align:center;
+        margin:10px;
+        float:left;
+        color:#fff;
+     }
+      #div1{
+        background-color:#000;
+        outline:5px inset rgba(200,0,0,0.5);
+     }
+      #div2{
+        background-color:#000;
+        box-shadow:10px 10px red;
+     }
+      #div3{
+        background-color:#000;
+        box-shadow:10px 10px 10px 10px red inset;
+     }
+      #div4{
+        background:linear-gradient(to bottom,#f00,#0f0,#00f);
+      }
+      #div5{
+        background:repeating-linear-gradient(#f00,#0f0 20%,#00f 30%);
+      }
+      #div6{
+        background:radial-gradient(circle 100px at left top,#f00,#0f0,#00f);
+      }
+      #div7{
+        background-color:#000;
+        filter:opacity(50%);
+     }
+    </style>
+  </head>
+  <body>
+    <div id="div1">纯色带轮廓背景</div>
+    <div id="div2">纯色带外边框阴影背景</div>
+    <div id="div3">纯色带内边框阴影背景</div>
+    <div id="div4">线性渐变背景</div>
+    <div id="div5">循环线性渐变背景</div>
+    <div id="div6">径向渐变背景</div>
+    <div id="div7">滤镜特效背景</div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>变量的作用域</title>
+    <Script type="text/JavaScript">
+      var gv = "JavaScript";//gv是全局变量
+      document.write("test函数的输出：<br>");
+      test();
+      function test() {
+        var lv = "VBScript";//lv是局部变量
+        document.write("gv=" + gv + "<br>");
+        document.write("lv=" + lv + "<br>"+ "<br>");
+      }
+      document.write("document的输出：<br>");
+      document.write("gv=" + gv + "<br>");
+      document.write("lv=" + lv + "<br>");
+    </Script> 
+  </head>
+  
+  <body>
+
+  </body>
+</html>
